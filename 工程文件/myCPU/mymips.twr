@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n 3
+-fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf
+
+Design file:              mymips.ncd
+Physical constraint file: mymips.pcf
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+ps2clk      |    2.321(R)|   -0.631(R)|clk_BUFGP         |   0.000|
+ps2data     |    3.874(R)|   -1.852(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+---------------+------------+------------------+--------+
+               | clk (edge) |                  | Clock  |
+Destination    |   to PAD   |Internal Clock(s) | Phase  |
+---------------+------------+------------------+--------+
+data_display<0>|    9.916(R)|clk_BUFGP         |   0.000|
+data_display<1>|   10.418(R)|clk_BUFGP         |   0.000|
+data_display<2>|   10.732(R)|clk_BUFGP         |   0.000|
+data_display<3>|   10.078(R)|clk_BUFGP         |   0.000|
+data_display<4>|   12.722(R)|clk_BUFGP         |   0.000|
+data_display<5>|   11.184(R)|clk_BUFGP         |   0.000|
+data_display<6>|   10.221(R)|clk_BUFGP         |   0.000|
+data_display<7>|    9.750(R)|clk_BUFGP         |   0.000|
+int_signal     |    8.334(R)|clk_BUFGP         |   0.000|
+ram1_control_EN|   11.590(R)|clk_BUFGP         |   0.000|
+ram1_control_OE|   11.013(R)|clk_BUFGP         |   0.000|
+ram1_control_WE|   11.700(R)|clk_BUFGP         |   0.000|
+ram2_control_EN|   10.627(R)|clk_BUFGP         |   0.000|
+ram2_control_OE|   13.147(R)|clk_BUFGP         |   0.000|
+ram2_control_WE|   12.446(R)|clk_BUFGP         |   0.000|
+rdn            |   13.618(R)|clk_BUFGP         |   0.000|
+wrn            |   14.158(R)|clk_BUFGP         |   0.000|
+---------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.366|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+----------------+----------------+---------+
+Source Pad      |Destination Pad |  Delay  |
+----------------+----------------+---------+
+ram1_data_io<0> |ram2_data_io<0> |    9.775|
+ram1_data_io<1> |ram2_data_io<1> |    9.425|
+ram1_data_io<2> |ram2_data_io<2> |    9.676|
+ram1_data_io<3> |ram2_data_io<3> |    9.500|
+ram1_data_io<4> |ram2_data_io<4> |   10.685|
+ram1_data_io<5> |ram2_data_io<5> |   10.822|
+ram1_data_io<6> |ram2_data_io<6> |    9.401|
+ram1_data_io<7> |ram2_data_io<7> |    8.952|
+ram1_data_io<8> |ram2_data_io<8> |    9.238|
+ram1_data_io<9> |ram2_data_io<9> |   10.280|
+ram1_data_io<10>|ram2_data_io<10>|    9.023|
+ram1_data_io<11>|ram2_data_io<11>|    8.203|
+ram1_data_io<12>|ram2_data_io<12>|    9.326|
+ram1_data_io<13>|ram2_data_io<13>|   10.196|
+ram1_data_io<14>|ram2_data_io<14>|    9.202|
+ram1_data_io<15>|ram2_data_io<15>|    8.943|
+rst             |is_booting      |   11.809|
+rst             |ram1_addr_o<0>  |   13.510|
+rst             |ram1_addr_o<1>  |   14.704|
+rst             |ram1_addr_o<2>  |   15.154|
+rst             |ram1_addr_o<3>  |   15.797|
+rst             |ram1_addr_o<4>  |   14.240|
+rst             |ram1_addr_o<5>  |   14.550|
+rst             |ram1_addr_o<6>  |   13.046|
+rst             |ram1_addr_o<7>  |   14.924|
+rst             |ram1_addr_o<8>  |   11.031|
+rst             |ram1_addr_o<9>  |   11.240|
+rst             |ram1_addr_o<10> |   11.588|
+rst             |ram1_addr_o<11> |   11.117|
+rst             |ram1_addr_o<12> |   10.609|
+rst             |ram1_addr_o<13> |   10.679|
+rst             |ram1_addr_o<14> |   14.051|
+rst             |ram1_addr_o<15> |   10.886|
+rst             |ram1_control_EN |   12.359|
+rst             |ram1_control_OE |    9.964|
+rst             |ram1_control_WE |    9.769|
+rst             |ram1_data_io<0> |   13.361|
+rst             |ram1_data_io<1> |   13.719|
+rst             |ram1_data_io<2> |   12.536|
+rst             |ram1_data_io<3> |   14.270|
+rst             |ram1_data_io<4> |   13.044|
+rst             |ram1_data_io<5> |   13.644|
+rst             |ram1_data_io<6> |   13.834|
+rst             |ram1_data_io<7> |   13.517|
+rst             |ram1_data_io<8> |   13.757|
+rst             |ram1_data_io<9> |   13.437|
+rst             |ram1_data_io<10>|   14.443|
+rst             |ram1_data_io<11>|   13.403|
+rst             |ram1_data_io<12>|   14.671|
+rst             |ram1_data_io<13>|   13.638|
+rst             |ram1_data_io<14>|   12.872|
+rst             |ram1_data_io<15>|   12.893|
+rst             |ram2_addr_o<0>  |   15.013|
+rst             |ram2_addr_o<1>  |   16.355|
+rst             |ram2_addr_o<2>  |   15.531|
+rst             |ram2_addr_o<3>  |   15.356|
+rst             |ram2_addr_o<4>  |   15.918|
+rst             |ram2_addr_o<5>  |   16.068|
+rst             |ram2_addr_o<6>  |   16.218|
+rst             |ram2_addr_o<7>  |   17.251|
+rst             |ram2_addr_o<8>  |   15.526|
+rst             |ram2_addr_o<9>  |   15.056|
+rst             |ram2_addr_o<10> |   16.012|
+rst             |ram2_addr_o<11> |   16.017|
+rst             |ram2_addr_o<12> |   16.204|
+rst             |ram2_addr_o<13> |   13.066|
+rst             |ram2_addr_o<14> |   15.873|
+rst             |ram2_addr_o<15> |   13.382|
+rst             |ram2_control_EN |    9.921|
+rst             |ram2_control_OE |   14.449|
+rst             |ram2_control_WE |   13.045|
+rst             |ram2_data_io<0> |   15.205|
+rst             |ram2_data_io<1> |   16.094|
+rst             |ram2_data_io<2> |   15.537|
+rst             |ram2_data_io<3> |   15.534|
+rst             |ram2_data_io<4> |   14.794|
+rst             |ram2_data_io<5> |   15.802|
+rst             |ram2_data_io<6> |   16.362|
+rst             |ram2_data_io<7> |   15.460|
+rst             |ram2_data_io<8> |   14.822|
+rst             |ram2_data_io<9> |   15.495|
+rst             |ram2_data_io<10>|   15.260|
+rst             |ram2_data_io<11>|   15.795|
+rst             |ram2_data_io<12>|   15.105|
+rst             |ram2_data_io<13>|   15.920|
+rst             |ram2_data_io<14>|   14.911|
+rst             |ram2_data_io<15>|   14.832|
+rst             |rdn             |   12.191|
+rst             |wrn             |   13.633|
+----------------+----------------+---------+
+
+
+Analysis completed Fri Dec 02 08:54:42 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 225 MB
+
+
+

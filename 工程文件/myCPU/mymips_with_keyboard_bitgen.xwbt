@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\sword\Desktop\myCPU_newStart\myCPU\mymips_with_keyboard.ncd
+OUTFILE=C:\Users\sword\Desktop\myCPU_newStart\myCPU\mymips_with_keyboard.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=C:\Users\sword\Desktop\myCPU_newStart\myCPU
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

@@ -1,0 +1,167 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n 3
+-fastpaths -xml flash_test.twx flash_test.ncd -o flash_test.twr flash_test.pcf
+-ucf flash_test.ucf
+
+Design file:              flash_test.ncd
+Physical constraint file: flash_test.pcf
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+--------------+------------+------------+------------------+--------+
+              |Max Setup to|Max Hold to |                  | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------------+--------+
+flash_data<0> |    3.297(R)|   -0.173(R)|clk_BUFGP         |   0.000|
+flash_data<1> |    3.297(R)|   -0.173(R)|clk_BUFGP         |   0.000|
+flash_data<2> |    3.294(R)|   -0.170(R)|clk_BUFGP         |   0.000|
+flash_data<3> |    3.294(R)|   -0.170(R)|clk_BUFGP         |   0.000|
+flash_data<4> |    3.304(R)|   -0.182(R)|clk_BUFGP         |   0.000|
+flash_data<5> |    3.304(R)|   -0.182(R)|clk_BUFGP         |   0.000|
+flash_data<6> |    3.306(R)|   -0.185(R)|clk_BUFGP         |   0.000|
+flash_data<7> |    3.306(R)|   -0.185(R)|clk_BUFGP         |   0.000|
+flash_data<8> |    3.301(R)|   -0.178(R)|clk_BUFGP         |   0.000|
+flash_data<9> |    3.301(R)|   -0.178(R)|clk_BUFGP         |   0.000|
+flash_data<10>|    3.298(R)|   -0.175(R)|clk_BUFGP         |   0.000|
+flash_data<11>|    3.298(R)|   -0.175(R)|clk_BUFGP         |   0.000|
+flash_data<12>|    3.295(R)|   -0.171(R)|clk_BUFGP         |   0.000|
+flash_data<13>|    3.295(R)|   -0.171(R)|clk_BUFGP         |   0.000|
+flash_data<14>|    3.293(R)|   -0.169(R)|clk_BUFGP         |   0.000|
+flash_data<15>|    3.293(R)|   -0.169(R)|clk_BUFGP         |   0.000|
+rst           |    6.441(R)|   -3.242(R)|clk_BUFGP         |   0.000|
+--------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+---------------------+------------+------------------+--------+
+                     | clk (edge) |                  | Clock  |
+Destination          |   to PAD   |Internal Clock(s) | Phase  |
+---------------------+------------+------------------+--------+
+booting              |   12.065(R)|clk_BUFGP         |   0.000|
+flash_addr<1>        |    9.926(R)|clk_BUFGP         |   0.000|
+flash_addr<2>        |    9.885(R)|clk_BUFGP         |   0.000|
+flash_addr<3>        |   10.310(R)|clk_BUFGP         |   0.000|
+flash_addr<4>        |    9.973(R)|clk_BUFGP         |   0.000|
+flash_addr<5>        |    9.729(R)|clk_BUFGP         |   0.000|
+flash_addr<6>        |    9.828(R)|clk_BUFGP         |   0.000|
+flash_addr<7>        |    8.891(R)|clk_BUFGP         |   0.000|
+flash_addr<8>        |    8.841(R)|clk_BUFGP         |   0.000|
+flash_addr<9>        |    9.161(R)|clk_BUFGP         |   0.000|
+flash_addr<10>       |    9.639(R)|clk_BUFGP         |   0.000|
+flash_addr<11>       |    8.937(R)|clk_BUFGP         |   0.000|
+flash_addr<12>       |    9.218(R)|clk_BUFGP         |   0.000|
+flash_addr<13>       |    9.213(R)|clk_BUFGP         |   0.000|
+flash_addr<14>       |    9.163(R)|clk_BUFGP         |   0.000|
+flash_addr<15>       |    8.303(R)|clk_BUFGP         |   0.000|
+flash_addr<16>       |    8.120(R)|clk_BUFGP         |   0.000|
+flash_addr_output<0> |   11.797(R)|clk_BUFGP         |   0.000|
+flash_addr_output<1> |   10.539(R)|clk_BUFGP         |   0.000|
+flash_addr_output<2> |   10.562(R)|clk_BUFGP         |   0.000|
+flash_addr_output<3> |   10.691(R)|clk_BUFGP         |   0.000|
+flash_addr_output<4> |   10.082(R)|clk_BUFGP         |   0.000|
+flash_addr_output<5> |   10.837(R)|clk_BUFGP         |   0.000|
+flash_addr_output<6> |    9.952(R)|clk_BUFGP         |   0.000|
+flash_addr_output<7> |   10.106(R)|clk_BUFGP         |   0.000|
+flash_addr_output<8> |   10.097(R)|clk_BUFGP         |   0.000|
+flash_addr_output<9> |   10.511(R)|clk_BUFGP         |   0.000|
+flash_addr_output<10>|    9.743(R)|clk_BUFGP         |   0.000|
+flash_addr_output<11>|    9.633(R)|clk_BUFGP         |   0.000|
+flash_addr_output<12>|    9.904(R)|clk_BUFGP         |   0.000|
+flash_addr_output<13>|    9.619(R)|clk_BUFGP         |   0.000|
+flash_addr_output<14>|    9.946(R)|clk_BUFGP         |   0.000|
+flash_addr_output<15>|    9.368(R)|clk_BUFGP         |   0.000|
+flash_data<0>        |    9.439(R)|clk_BUFGP         |   0.000|
+flash_data<1>        |    9.154(R)|clk_BUFGP         |   0.000|
+flash_data<2>        |    9.406(R)|clk_BUFGP         |   0.000|
+flash_data<3>        |    9.151(R)|clk_BUFGP         |   0.000|
+flash_data<4>        |    8.925(R)|clk_BUFGP         |   0.000|
+flash_data<5>        |    9.178(R)|clk_BUFGP         |   0.000|
+flash_data<6>        |    8.648(R)|clk_BUFGP         |   0.000|
+flash_data<7>        |    8.907(R)|clk_BUFGP         |   0.000|
+flash_data<8>        |    9.187(R)|clk_BUFGP         |   0.000|
+flash_data<9>        |    9.161(R)|clk_BUFGP         |   0.000|
+flash_data<10>       |    9.166(R)|clk_BUFGP         |   0.000|
+flash_data<11>       |    9.177(R)|clk_BUFGP         |   0.000|
+flash_data<12>       |    9.415(R)|clk_BUFGP         |   0.000|
+flash_data<13>       |    9.424(R)|clk_BUFGP         |   0.000|
+flash_data<14>       |    9.673(R)|clk_BUFGP         |   0.000|
+flash_data<15>       |    9.657(R)|clk_BUFGP         |   0.000|
+flash_data_output<0> |   10.872(R)|clk_BUFGP         |   0.000|
+flash_data_output<1> |   11.072(R)|clk_BUFGP         |   0.000|
+flash_data_output<2> |   11.134(R)|clk_BUFGP         |   0.000|
+flash_data_output<3> |   10.972(R)|clk_BUFGP         |   0.000|
+flash_data_output<4> |   10.619(R)|clk_BUFGP         |   0.000|
+flash_data_output<5> |   10.226(R)|clk_BUFGP         |   0.000|
+flash_data_output<6> |   11.038(R)|clk_BUFGP         |   0.000|
+flash_data_output<7> |   10.526(R)|clk_BUFGP         |   0.000|
+flash_data_output<8> |   11.564(R)|clk_BUFGP         |   0.000|
+flash_data_output<9> |   11.363(R)|clk_BUFGP         |   0.000|
+flash_data_output<10>|   11.039(R)|clk_BUFGP         |   0.000|
+flash_data_output<11>|   10.571(R)|clk_BUFGP         |   0.000|
+flash_data_output<12>|   10.841(R)|clk_BUFGP         |   0.000|
+flash_data_output<13>|   11.088(R)|clk_BUFGP         |   0.000|
+flash_data_output<14>|   11.497(R)|clk_BUFGP         |   0.000|
+flash_data_output<15>|   10.966(R)|clk_BUFGP         |   0.000|
+flash_oe             |    9.544(R)|clk_BUFGP         |   0.000|
+flash_we             |    9.982(R)|clk_BUFGP         |   0.000|
+---------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.718|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+rst            |booting        |   13.054|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Nov 27 17:53:39 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 191 MB
+
+
+

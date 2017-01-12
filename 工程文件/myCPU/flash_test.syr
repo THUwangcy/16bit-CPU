@@ -1,0 +1,485 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: flash_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "flash_test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "flash_test"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : flash_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/type_lib.vhd" in Library work.
+Architecture type_lib of Entity type_lib is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd" in Library work.
+Entity <flash_io> compiled.
+Entity <flash_io> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_test.vhd" in Library work.
+Architecture behavioral of Entity flash_test is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <flash_test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_io> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <flash_test> in library <work> (Architecture <behavioral>).
+Entity <flash_test> analyzed. Unit <flash_test> generated.
+
+Analyzing Entity <flash_io> in library <work> (Architecture <behavioral>).
+Entity <flash_io> analyzed. Unit <flash_io> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <flash_io>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd".
+INFO:Xst:1799 - State done is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | state$index0000           (negative)           |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | waiting                                        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <flash_data>.
+    Found 1-bit register for signal <flash_we>.
+    Found 22-bit register for signal <flash_addr>.
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <flash_oe>.
+    Found 16-bit register for signal <Mtridata_flash_data> created at line 77.
+    Found 1-bit register for signal <Mtrien_flash_data> created at line 77.
+    Found 16-bit up counter for signal <next_addr>.
+    Found 16-bit register for signal <temp_addr>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  73 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <flash_io> synthesized.
+
+
+Synthesizing Unit <flash_test>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_test.vhd".
+Unit <flash_test> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 7
+ 1-bit register                                        : 3
+ 16-bit register                                       : 3
+ 22-bit register                                       : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <flash/state/FSM> on signal <state[1:5]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ waiting | 00001
+ read1   | 00010
+ read2   | 00100
+ read3   | 01000
+ read4   | 10000
+ done    | unreached
+---------------------
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_0> in Unit <flash> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_1> <Mtridata_flash_data_2> <Mtridata_flash_data_3> <Mtridata_flash_data_4> <Mtridata_flash_data_5> <Mtridata_flash_data_6> <Mtridata_flash_data_7> 
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <flash_addr_17> in Unit <flash> is equivalent to the following 5 FFs/Latches, which will be removed : <flash_addr_18> <flash_addr_19> <flash_addr_20> <flash_addr_21> <flash_addr_22> 
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_8> in Unit <flash> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_9> <Mtridata_flash_data_10> <Mtridata_flash_data_11> <Mtridata_flash_data_12> <Mtridata_flash_data_13> <Mtridata_flash_data_14> <Mtridata_flash_data_15> 
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<9> Mtridata_flash_data<9> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<10> Mtridata_flash_data<10> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<11> Mtridata_flash_data<11> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<12> Mtridata_flash_data<12> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<13> Mtridata_flash_data<13> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<14> Mtridata_flash_data<14> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<15> Mtridata_flash_data<15> signal will be lost.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_8> (without init value) has a constant value of 0 in block <flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_addr_17> (without init value) has a constant value of 0 in block <flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <flash_addr<22:16>> (without init value) have a constant value of 0 in block <flash_io>.
+WARNING:Xst:2404 -  FFs/Latches <Mtridata_flash_data<15:8>> (without init value) have a constant value of 0 in block <flash_io>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_1> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_2> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_3> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_4> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_5> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_6> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_7> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+
+Optimizing unit <flash_test> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block flash_test, actual ratio is 0.
+FlipFlop flash/state_FSM_FFd1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 73
+ Flip-Flops                                            : 73
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : flash_test.ngr
+Top Level Output File Name         : flash_test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 79
+
+Cell Usage :
+# BELS                             : 79
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 15
+#      LUT2                        : 4
+#      LUT3                        : 1
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 20
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 73
+#      FDCE                        : 53
+#      FDE                         : 16
+#      FDPE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 78
+#      IBUF                        : 1
+#      IOBUF                       : 16
+#      OBUF                        : 61
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                       33  out of   8672     0%  
+ Number of Slice Flip Flops:             57  out of  17344     0%  
+ Number of 4 input LUTs:                 46  out of  17344     0%  
+ Number of IOs:                          79
+ Number of bonded IOBs:                  79  out of    250    31%  
+    IOB Flip Flops:                      16
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 73    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------+------------------------------+-------+
+Control Signal                           | Buffer(FF name)              | Load  |
+-----------------------------------------+------------------------------+-------+
+flash/reset_inv(flash/reset_inv1_INV_0:O)| NONE(flash/Mtrien_flash_data)| 57    |
+-----------------------------------------+------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.565ns (Maximum Frequency: 219.058MHz)
+   Minimum input arrival time before clock: 4.217ns
+   Maximum output required time after clock: 5.774ns
+   Maximum combinational path delay: 6.320ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.565ns (frequency: 219.058MHz)
+  Total number of paths / destination ports: 397 / 129
+-------------------------------------------------------------------------
+Delay:               4.565ns (Levels of Logic = 3)
+  Source:            flash/state_FSM_FFd1_1 (FF)
+  Destination:       flash/flash_oe (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: flash/state_FSM_FFd1_1 to flash/flash_oe
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.595  flash/state_FSM_FFd1_1 (flash/state_FSM_FFd1_1)
+     LUT2:I0->O            3   0.704   0.535  flash/state_FSM_FFd2-In1 (flash/state_FSM_FFd2-In)
+     LUT4:I3->O            1   0.704   0.424  flash/flash_oe_mux0000_SW0 (N6)
+     LUT4:I3->O            1   0.704   0.000  flash/flash_oe_mux0000 (flash/flash_oe_mux0000)
+     FDPE:D                    0.308          flash/flash_oe
+    ----------------------------------------
+    Total                      4.565ns (3.011ns logic, 1.554ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.217ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       flash/flash_addr_16 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to flash/flash_addr_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  rst_IBUF (rst_IBUF)
+     LUT3:I0->O           16   0.704   1.034  flash/flash_addr_and00001 (flash/flash_addr_and0000)
+     FDE:CE                    0.555          flash/flash_addr_1
+    ----------------------------------------
+    Total                      4.217ns (2.477ns logic, 1.740ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 67 / 67
+-------------------------------------------------------------------------
+Offset:              5.774ns (Levels of Logic = 2)
+  Source:            flash/temp_addr_9 (FF)
+  Destination:       booting (PAD)
+  Source Clock:      clk rising
+
+  Data Path: flash/temp_addr_9 to booting
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.591   0.787  flash/temp_addr_9 (flash/temp_addr_9)
+     LUT2:I1->O            1   0.704   0.420  flash/booting1 (booting_OBUF)
+     OBUF:I->O                 3.272          booting_OBUF (booting)
+    ----------------------------------------
+    Total                      5.774ns (4.567ns logic, 1.207ns route)
+                                       (79.1% logic, 20.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.320ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       booting (PAD)
+
+  Data Path: rst to booting
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            1   0.704   0.420  flash/booting1 (booting_OBUF)
+     OBUF:I->O                 3.272          booting_OBUF (booting)
+    ----------------------------------------
+    Total                      6.320ns (5.194ns logic, 1.126ns route)
+                                       (82.2% logic, 17.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.96 secs
+ 
+--> 
+
+Total memory usage is 247644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Nov 30 15:53:23 2016
+# Process ID: 7520
+# Log file: C:/Users/sword/Desktop/myCPU_newStart/myCPU/planAhead_run_5/planAhead.log
+# Journal file: C:/Users/sword/Desktop/myCPU_newStart/myCPU/planAhead_run_5/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/sword/Desktop/myCPU_newStart/myCPU/pa.fromNetlist.tcl

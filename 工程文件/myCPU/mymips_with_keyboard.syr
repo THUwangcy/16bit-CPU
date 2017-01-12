@@ -1,0 +1,1249 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: mymips_with_keyboard.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mymips_with_keyboard.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mymips_with_keyboard"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : mymips_with_keyboard
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/type_lib.vhd" in Library work.
+Architecture type_lib of Entity type_lib is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/key_data.vhd" in Library work.
+Architecture behavioral of Entity key_data is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/convert.vhd" in Library work.
+Architecture behavioral of Entity convert is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ctrl.vhd" in Library work.
+Architecture behavioral of Entity ctrl is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/load_ralated.vhd" in Library work.
+Architecture behavioral of Entity load_related is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/pc_reg.vhd" in Library work.
+Architecture behavioral of Entity pc_reg is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/if_id.vhd" in Library work.
+Architecture behavioral of Entity if_id is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/interpreter.vhd" in Library work.
+Architecture behavioral of Entity interpreter is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/controller.vhd" in Library work.
+Architecture behavioral of Entity controller is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/branch_ctrl.vhd" in Library work.
+Architecture behavioral of Entity branch_ctrl is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd" in Library work.
+Architecture behavioral of Entity regfile is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ID_EX.vhd" in Library work.
+Architecture behavioral of Entity id_ex is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/EX_MEM.vhd" in Library work.
+Architecture behavioral of Entity ex_mem is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mem.vhd" in Library work.
+Architecture behavioral of Entity mem is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Ram1_adapter.vhd" in Library work.
+Architecture behavioral of Entity ram1_adapter is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd" in Library work.
+Architecture behavioral of Entity ram2_adapter is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/MEM_WB.vhd" in Library work.
+Architecture behavioral of Entity mem_wb is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd" in Library work.
+Architecture behavioral of Entity flash_io is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.vhd" in Library work.
+Entity <mymips> compiled.
+Entity <mymips> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/my_keyboard.vhd" in Library work.
+Architecture behavioral of Entity my_keyboard is up to date.
+Compiling vhdl file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.vhd" in Library work.
+Architecture behavioral of Entity mymips_with_keyboard is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mymips_with_keyboard> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mymips> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <my_keyboard> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <load_related> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <pc_reg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <if_id> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <interpreter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <controller> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <branch_ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Regfile> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ID_EX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EX_MEM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mem> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Ram1_adapter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ram2_adapter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MEM_WB> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_io> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <key_data> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <convert> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mymips_with_keyboard> in library <work> (Architecture <behavioral>).
+Entity <mymips_with_keyboard> analyzed. Unit <mymips_with_keyboard> generated.
+
+Analyzing Entity <mymips> in library <work> (Architecture <behavioral>).
+Entity <mymips> analyzed. Unit <mymips> generated.
+
+Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
+Entity <ctrl> analyzed. Unit <ctrl> generated.
+
+Analyzing Entity <load_related> in library <work> (Architecture <behavioral>).
+Entity <load_related> analyzed. Unit <load_related> generated.
+
+Analyzing Entity <pc_reg> in library <work> (Architecture <behavioral>).
+Entity <pc_reg> analyzed. Unit <pc_reg> generated.
+
+Analyzing Entity <if_id> in library <work> (Architecture <behavioral>).
+Entity <if_id> analyzed. Unit <if_id> generated.
+
+Analyzing Entity <interpreter> in library <work> (Architecture <behavioral>).
+Entity <interpreter> analyzed. Unit <interpreter> generated.
+
+Analyzing Entity <controller> in library <work> (Architecture <behavioral>).
+Entity <controller> analyzed. Unit <controller> generated.
+
+Analyzing Entity <branch_ctrl> in library <work> (Architecture <behavioral>).
+Entity <branch_ctrl> analyzed. Unit <branch_ctrl> generated.
+
+Analyzing Entity <Regfile> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd" line 85: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <regs>
+WARNING:Xst:819 - "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd" line 108: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <regs>
+Entity <Regfile> analyzed. Unit <Regfile> generated.
+
+Analyzing Entity <ID_EX> in library <work> (Architecture <behavioral>).
+Entity <ID_EX> analyzed. Unit <ID_EX> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <EX_MEM> in library <work> (Architecture <behavioral>).
+Entity <EX_MEM> analyzed. Unit <EX_MEM> generated.
+
+Analyzing Entity <mem> in library <work> (Architecture <behavioral>).
+Entity <mem> analyzed. Unit <mem> generated.
+
+Analyzing Entity <Ram1_adapter> in library <work> (Architecture <behavioral>).
+Entity <Ram1_adapter> analyzed. Unit <Ram1_adapter> generated.
+
+Analyzing Entity <ram2_adapter> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd" line 57: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <flash_addr_i>, <flash_data_i>
+Entity <ram2_adapter> analyzed. Unit <ram2_adapter> generated.
+
+Analyzing Entity <MEM_WB> in library <work> (Architecture <behavioral>).
+Entity <MEM_WB> analyzed. Unit <MEM_WB> generated.
+
+Analyzing Entity <flash_io> in library <work> (Architecture <behavioral>).
+Entity <flash_io> analyzed. Unit <flash_io> generated.
+
+Analyzing Entity <my_keyboard> in library <work> (Architecture <behavioral>).
+Entity <my_keyboard> analyzed. Unit <my_keyboard> generated.
+
+Analyzing Entity <key_data> in library <work> (Architecture <behavioral>).
+Entity <key_data> analyzed. Unit <key_data> generated.
+
+Analyzing Entity <convert> in library <work> (Architecture <behavioral>).
+Entity <convert> analyzed. Unit <convert> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctrl>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ctrl.vhd".
+Unit <ctrl> synthesized.
+
+
+Synthesizing Unit <load_related>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/load_ralated.vhd".
+    Found 4-bit comparator equal for signal <stallreq_load$cmp_eq0000> created at line 52.
+    Found 4-bit comparator equal for signal <stallreq_load$cmp_eq0001> created at line 52.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <load_related> synthesized.
+
+
+Synthesizing Unit <pc_reg>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/pc_reg.vhd".
+WARNING:Xst:647 - Input <stall<4:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <next_pc>.
+    Found 16-bit adder for signal <next_pc$add0000> created at line 69.
+    Found 16-bit register for signal <temp_pc>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <pc_reg> synthesized.
+
+
+Synthesizing Unit <if_id>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/if_id.vhd".
+WARNING:Xst:647 - Input <stall<4:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <stall<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:1799 - State 1010 is never reached in FSM <int_state>.
+    Found finite state machine <FSM_0> for signal <int_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 24                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | int_state$not0000         (positive)           |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <int_num>.
+    Found 1-bit register for signal <last_int>.
+    Found 16-bit register for signal <temp_id_inst>.
+    Found 16-bit register for signal <temp_id_pc>.
+    Found 16-bit adder for signal <temp_id_pc$addsub0000> created at line 92.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <if_id> synthesized.
+
+
+Synthesizing Unit <interpreter>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/interpreter.vhd".
+    Found 16-bit adder for signal <imme$addsub0000> created at line 201.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <interpreter> synthesized.
+
+
+Synthesizing Unit <controller>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/controller.vhd".
+Unit <controller> synthesized.
+
+
+Synthesizing Unit <branch_ctrl>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/branch_ctrl.vhd".
+    Found 16-bit adder carry in for signal <ctrl_pc$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <branch_ctrl> synthesized.
+
+
+Synthesizing Unit <Regfile>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd".
+    Found 16x16-bit dual-port RAM <Mram_regs> for signal <regs>.
+    Found 16x16-bit dual-port RAM <Mram_regs_ren> for signal <regs>.
+    Found 4-bit comparator equal for signal <readData1$cmp_eq0001> created at line 91.
+    Found 4-bit comparator equal for signal <readData1$cmp_eq0002> created at line 94.
+    Found 4-bit comparator equal for signal <readData1$cmp_eq0003> created at line 96.
+    Found 4-bit comparator equal for signal <readData2$cmp_eq0001> created at line 114.
+    Found 4-bit comparator equal for signal <readData2$cmp_eq0002> created at line 117.
+    Found 4-bit comparator equal for signal <readData2$cmp_eq0003> created at line 119.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   6 Comparator(s).
+Unit <Regfile> synthesized.
+
+
+Synthesizing Unit <ID_EX>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ID_EX.vhd".
+WARNING:Xst:647 - Input <stall<4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <stall<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <temp_EXControl.ALUOp>.
+    Found 2-bit register for signal <temp_EXControl.ALUSrc>.
+    Found 16-bit register for signal <temp_Imme>.
+    Found 1-bit register for signal <temp_MEMControl.memRead>.
+    Found 1-bit register for signal <temp_MEMControl.memWrite>.
+    Found 16-bit register for signal <temp_Reg1>.
+    Found 16-bit register for signal <temp_Reg2>.
+    Found 4-bit register for signal <temp_RegWrite>.
+    Found 2-bit register for signal <temp_WBControl.memToReg>.
+    Found 1-bit register for signal <temp_WBControl.regWrite>.
+    Summary:
+	inferred  55 D-type flip-flop(s).
+Unit <ID_EX> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ALU.vhd".
+    Found 16-bit addsub for signal <output$addsub0000>.
+    Found 16-bit comparator equal for signal <output$cmp_eq0076> created at line 158.
+    Found 16-bit comparator equal for signal <output$cmp_eq0077> created at line 164.
+    Found 16-bit comparator greatequal for signal <output$cmp_ge0000> created at line 135.
+    Found 16-bit xor2 for signal <output$xor0000> created at line 96.
+    Found 16-bit xor2 for signal <output$xor0001> created at line 98.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <EX_MEM>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/EX_MEM.vhd".
+    Found 16-bit register for signal <temp_ALUAns>.
+    Found 16-bit register for signal <temp_ALUinputB>.
+    Found 1-bit register for signal <temp_MEMControl.memRead>.
+    Found 1-bit register for signal <temp_MEMControl.memWrite>.
+    Found 4-bit register for signal <temp_RegWrite>.
+    Found 2-bit register for signal <temp_WBControl.memToReg>.
+    Found 1-bit register for signal <temp_WBControl.regWrite>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+Unit <EX_MEM> synthesized.
+
+
+Synthesizing Unit <mem>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mem.vhd".
+Unit <mem> synthesized.
+
+
+Synthesizing Unit <Ram1_adapter>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/Ram1_adapter.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rdn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_wrn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit tristate buffer for signal <temp_mem_data$mux0001> created at line 67.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <Ram1_adapter> synthesized.
+
+
+Synthesizing Unit <ram2_adapter>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd".
+    Found 16-bit tristate buffer for signal <ram2_data_io>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <ram2_adapter> synthesized.
+
+
+Synthesizing Unit <MEM_WB>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/MEM_WB.vhd".
+    Found 4-bit register for signal <temp_RegWrite>.
+    Found 16-bit register for signal <temp_RegWriteData>.
+    Found 2-bit register for signal <temp_WBControl.memToReg>.
+    Found 1-bit register for signal <temp_WBControl.regWrite>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+Unit <MEM_WB> synthesized.
+
+
+Synthesizing Unit <flash_io>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd".
+INFO:Xst:1799 - State done is never reached in FSM <state>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | state$index0000           (negative)           |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | waiting                                        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <flash_data>.
+    Found 1-bit register for signal <flash_we>.
+    Found 22-bit register for signal <flash_addr>.
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <flash_oe>.
+    Found 16-bit register for signal <Mtridata_flash_data> created at line 77.
+    Found 1-bit register for signal <Mtrien_flash_data> created at line 77.
+    Found 16-bit up counter for signal <next_addr>.
+    Found 16-bit register for signal <temp_addr>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  73 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <flash_io> synthesized.
+
+
+Synthesizing Unit <key_data>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/key_data.vhd".
+    Found 1-bit register for signal <clk1>.
+    Found 1-bit register for signal <clk2>.
+    Found 1-bit register for signal <clkin>.
+    Found 1-bit register for signal <now_clk>.
+    Found 1-bit register for signal <pre_clk>.
+    Found 12-bit register for signal <temp>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <key_data> synthesized.
+
+
+Synthesizing Unit <convert>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/convert.vhd".
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <con_clk>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <convert> synthesized.
+
+
+Synthesizing Unit <mymips>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.vhd".
+WARNING:Xst:646 - Signal <wb_WBControl_i.memToReg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit up counter for signal <clk_16>.
+    Found 2-bit up counter for signal <clk_4>.
+    Summary:
+	inferred   2 Counter(s).
+Unit <mymips> synthesized.
+
+
+Synthesizing Unit <my_keyboard>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/my_keyboard.vhd".
+Unit <my_keyboard> synthesized.
+
+
+Synthesizing Unit <mymips_with_keyboard>.
+    Related source file is "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.vhd".
+WARNING:Xst:646 - Signal <request_keyboard> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <mymips_with_keyboard> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x16-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 3
+ 16-bit adder carry in                                 : 1
+ 16-bit addsub                                         : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 41
+ 1-bit register                                        : 17
+ 12-bit register                                       : 1
+ 16-bit register                                       : 13
+ 2-bit register                                        : 4
+ 22-bit register                                       : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 11
+ 16-bit comparator equal                               : 2
+ 16-bit comparator greatequal                          : 1
+ 4-bit comparator equal                                : 8
+# Tristates                                            : 3
+ 16-bit tristate buffer                                : 3
+# Xors                                                 : 2
+ 16-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <keyboard_INSTANCE/conv_instance/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <mymips_INSTANCE/flash_INSTANCE/state/FSM> on signal <state[1:5]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ waiting | 00001
+ read1   | 00010
+ read2   | 00100
+ read3   | 01000
+ read4   | 10000
+ done    | unreached
+---------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <mymips_INSTANCE/if_id_INSTANCE/int_state/FSM> on signal <int_state[1:11]> with one-hot encoding.
+----------------------
+ State | Encoding
+----------------------
+ 0000  | 00000000001
+ 0001  | 00000000010
+ 0010  | 00000000100
+ 0011  | 00000001000
+ 0100  | 00000010000
+ 0101  | 00000100000
+ 0110  | 00001000000
+ 0111  | 00010000000
+ 1000  | 00100000000
+ 1001  | 01000000000
+ 1010  | unreached
+ 1011  | 10000000000
+----------------------
+INFO:Xst:2261 - The FF/Latch <int_num_5> in Unit <if_id_INSTANCE> is equivalent to the following 2 FFs/Latches, which will be removed : <int_num_6> <int_num_7> 
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_0> in Unit <flash_INSTANCE> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_1> <Mtridata_flash_data_2> <Mtridata_flash_data_3> <Mtridata_flash_data_4> <Mtridata_flash_data_5> <Mtridata_flash_data_6> <Mtridata_flash_data_7> 
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <flash_addr_17> in Unit <flash_INSTANCE> is equivalent to the following 5 FFs/Latches, which will be removed : <flash_addr_18> <flash_addr_19> <flash_addr_20> <flash_addr_21> <flash_addr_22> 
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_8> in Unit <flash_INSTANCE> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_9> <Mtridata_flash_data_10> <Mtridata_flash_data_11> <Mtridata_flash_data_12> <Mtridata_flash_data_13> <Mtridata_flash_data_14> <Mtridata_flash_data_15> 
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<9> Mtridata_flash_data<9> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<10> Mtridata_flash_data<10> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<11> Mtridata_flash_data<11> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<12> Mtridata_flash_data<12> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<13> Mtridata_flash_data<13> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<14> Mtridata_flash_data<14> signal will be lost.
+WARNING:Xst:638 - in unit mymips_INSTANCE/flash_INSTANCE Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<15> Mtridata_flash_data<15> signal will be lost.
+WARNING:Xst:1293 - FF/Latch <int_num_5> has a constant value of 0 in block <if_id_INSTANCE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash_INSTANCE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_8> (without init value) has a constant value of 0 in block <flash_INSTANCE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_addr_17> (without init value) has a constant value of 0 in block <flash_INSTANCE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <flash_addr<22:16>> (without init value) have a constant value of 0 in block <flash_io>.
+WARNING:Xst:2404 -  FFs/Latches <Mtridata_flash_data<15:8>> (without init value) have a constant value of 0 in block <flash_io>.
+
+Synthesizing (advanced) Unit <Regfile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     addrB          | connected to signal <readAddr1>     |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regs_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     addrB          | connected to signal <readAddr2>     |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Regfile> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# RAMs                                                 : 2
+ 16x16-bit dual-port distributed RAM                   : 2
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 3
+ 16-bit adder carry in                                 : 1
+ 16-bit addsub                                         : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 277
+ Flip-Flops                                            : 277
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 11
+ 16-bit comparator equal                               : 2
+ 16-bit comparator greatequal                          : 1
+ 4-bit comparator equal                                : 8
+# Xors                                                 : 2
+ 16-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <int_num_5> has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <int_num_6> has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <int_num_7> has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_1> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_2> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_3> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_4> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_5> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_6> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_7> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+
+Optimizing unit <mymips_with_keyboard> ...
+
+Optimizing unit <controller> ...
+
+Optimizing unit <pc_reg> ...
+
+Optimizing unit <if_id> ...
+
+Optimizing unit <interpreter> ...
+
+Optimizing unit <branch_ctrl> ...
+
+Optimizing unit <Regfile> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <key_data> ...
+
+Optimizing unit <convert> ...
+
+Optimizing unit <ID_EX> ...
+
+Optimizing unit <EX_MEM> ...
+
+Optimizing unit <MEM_WB> ...
+WARNING:Xst:2677 - Node <mymips_INSTANCE/mem_wb_INSTANCE/temp_WBControl.memToReg_0> of sequential type is unconnected in block <mymips_with_keyboard>.
+WARNING:Xst:2677 - Node <mymips_INSTANCE/mem_wb_INSTANCE/temp_WBControl.memToReg_1> of sequential type is unconnected in block <mymips_with_keyboard>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <mymips_INSTANCE/id_ex_INSTANCE/temp_WBControl.memToReg_0> in Unit <mymips_with_keyboard> is equivalent to the following FF/Latch, which will be removed : <mymips_INSTANCE/id_ex_INSTANCE/temp_MEMControl.memRead> 
+INFO:Xst:2261 - The FF/Latch <mymips_INSTANCE/ex_mem_INSTANCE/temp_WBControl.memToReg_0> in Unit <mymips_with_keyboard> is equivalent to the following FF/Latch, which will be removed : <mymips_INSTANCE/ex_mem_INSTANCE/temp_MEMControl.memRead> 
+Found area constraint ratio of 100 (+ 5) on block mymips_with_keyboard, actual ratio is 12.
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_EXControl.ALUOp_0 has been replicated 1 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_EXControl.ALUOp_2 has been replicated 1 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_0 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_1 has been replicated 3 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_2 has been replicated 3 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_3 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Reg2_0 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Reg2_1 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Reg2_2 has been replicated 1 time(s)
+FlipFlop mymips_INSTANCE/id_ex_INSTANCE/temp_Reg2_3 has been replicated 1 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_0 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_1 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_10 has been replicated 1 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_11 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_12 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_13 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_14 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_15 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_2 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_3 has been replicated 2 time(s)
+FlipFlop mymips_INSTANCE/if_id_INSTANCE/temp_id_inst_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 340
+ Flip-Flops                                            : 340
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mymips_with_keyboard.ngr
+Top Level Output File Name         : mymips_with_keyboard
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 137
+
+Cell Usage :
+# BELS                             : 2409
+#      GND                         : 1
+#      INV                         : 21
+#      LUT1                        : 30
+#      LUT2                        : 127
+#      LUT2_D                      : 9
+#      LUT2_L                      : 17
+#      LUT3                        : 197
+#      LUT3_D                      : 42
+#      LUT3_L                      : 71
+#      LUT4                        : 1224
+#      LUT4_D                      : 157
+#      LUT4_L                      : 190
+#      MUXCY                       : 122
+#      MUXF5                       : 104
+#      VCC                         : 1
+#      XORCY                       : 96
+# FlipFlops/Latches                : 342
+#      FD                          : 8
+#      FDC                         : 74
+#      FDCE                        : 201
+#      FDE                         : 33
+#      FDP                         : 6
+#      FDPE                        : 15
+#      FDR                         : 3
+#      LDCP                        : 1
+#      LDP                         : 1
+# RAMS                             : 32
+#      RAM16X1D                    : 32
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 136
+#      IBUF                        : 6
+#      IOBUF                       : 48
+#      OBUF                        : 82
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                     1121  out of   8672    12%  
+ Number of Slice Flip Flops:            342  out of  17344     1%  
+ Number of 4 input LUTs:               2149  out of  17344    12%  
+    Number used as logic:              2085
+    Number used as RAMs:                 64
+ Number of IOs:                         137
+ Number of bonded IOBs:                 137  out of    250    54%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+-----------------------------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)                               | Load  |
+--------------------------------------------------------+-----------------------------------------------------+-------+
+mymips_INSTANCE/clk_16_31                               | BUFG                                                | 72    |
+mymips_INSTANCE/ex_mem_INSTANCE/temp_MEMControl.memWrite| NONE(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_wrn)| 2     |
+clk                                                     | BUFGP                                               | 26    |
+mymips_INSTANCE/clk_4_11                                | BUFG                                                | 274   |
+--------------------------------------------------------+-----------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+Control Signal                                                                                                     | Buffer(FF name)                                     | Load  |
+-------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+mymips_INSTANCE/ex_mem_INSTANCE/rst_inv(mymips_INSTANCE/pc_INSTANCE/rst_inv1:O)                                    | NONE(mymips_INSTANCE/ex_mem_INSTANCE/temp_ALUAns_0) | 237   |
+keyboard_INSTANCE/conv_instance/rst_inv(mymips_INSTANCE/flash_INSTANCE/reset_inv1_INV_0:O)                         | NONE(keyboard_INSTANCE/conv_instance/con_clk)       | 59    |
+mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn__and0000(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn__and00001:O)| NONE(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn)| 1     |
+mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn__or0000(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn__or00001:O)  | NONE(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn)| 1     |
+mymips_INSTANCE/ram1_adapter_INSTANCE/temp_wrn_or0000(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_wrn_mux0003_SW1:O)| NONE(mymips_INSTANCE/ram1_adapter_INSTANCE/temp_wrn)| 1     |
+-------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 22.531ns (Maximum Frequency: 44.383MHz)
+   Minimum input arrival time before clock: 24.898ns
+   Maximum output required time after clock: 12.830ns
+   Maximum combinational path delay: 13.360ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mymips_INSTANCE/clk_16_31'
+  Clock period: 5.481ns (frequency: 182.448MHz)
+  Total number of paths / destination ports: 649 / 143
+-------------------------------------------------------------------------
+Delay:               5.481ns (Levels of Logic = 3)
+  Source:            mymips_INSTANCE/flash_INSTANCE/next_addr_7 (FF)
+  Destination:       mymips_INSTANCE/flash_INSTANCE/data_out_0 (FF)
+  Source Clock:      mymips_INSTANCE/clk_16_31 rising
+  Destination Clock: mymips_INSTANCE/clk_16_31 rising
+
+  Data Path: mymips_INSTANCE/flash_INSTANCE/next_addr_7 to mymips_INSTANCE/flash_INSTANCE/data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.591   0.762  mymips_INSTANCE/flash_INSTANCE/next_addr_7 (mymips_INSTANCE/flash_INSTANCE/next_addr_7)
+     LUT4:I0->O            1   0.704   0.595  mymips_INSTANCE/flash_INSTANCE/data_out_cmp_eq000012 (mymips_INSTANCE/flash_INSTANCE/data_out_cmp_eq000012)
+     LUT4:I0->O           16   0.704   1.113  mymips_INSTANCE/flash_INSTANCE/data_out_cmp_eq000076 (mymips_INSTANCE/flash_INSTANCE/data_out_cmp_eq0000)
+     LUT2:I1->O            1   0.704   0.000  mymips_INSTANCE/flash_INSTANCE/data_out_mux0000<9>1 (mymips_INSTANCE/flash_INSTANCE/data_out_mux0000<9>)
+     FDCE:D                    0.308          mymips_INSTANCE/flash_INSTANCE/data_out_6
+    ----------------------------------------
+    Total                      5.481ns (3.011ns logic, 2.470ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.066ns (frequency: 141.523MHz)
+  Total number of paths / destination ports: 116 / 37
+-------------------------------------------------------------------------
+Delay:               7.066ns (Levels of Logic = 5)
+  Source:            keyboard_INSTANCE/key_instance/temp_0 (FF)
+  Destination:       keyboard_INSTANCE/conv_instance/state_FSM_FFd1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: keyboard_INSTANCE/key_instance/temp_0 to keyboard_INSTANCE/conv_instance/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             24   0.591   1.331  keyboard_INSTANCE/key_instance/temp_0 (keyboard_INSTANCE/key_instance/temp_0)
+     LUT2:I1->O            2   0.704   0.622  keyboard_INSTANCE/key_instance/data<6>1 (data_display_6_OBUF)
+     LUT4:I0->O            2   0.704   0.482  keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In111 (keyboard_INSTANCE/conv_instance/N3)
+     LUT4:I2->O            1   0.704   0.595  keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In12 (keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In12)
+     LUT3:I0->O            1   0.704   0.000  keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In392 (keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In391)
+     MUXF5:I0->O           1   0.321   0.000  keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In39_f5 (keyboard_INSTANCE/conv_instance/state_FSM_FFd1-In)
+     FDC:D                     0.308          keyboard_INSTANCE/conv_instance/state_FSM_FFd1
+    ----------------------------------------
+    Total                      7.066ns (4.036ns logic, 3.030ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mymips_INSTANCE/clk_4_11'
+  Clock period: 22.531ns (frequency: 44.383MHz)
+  Total number of paths / destination ports: 87790265 / 641
+-------------------------------------------------------------------------
+Delay:               22.531ns (Levels of Logic = 30)
+  Source:            mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_2_2 (FF)
+  Destination:       mymips_INSTANCE/pc_INSTANCE/next_pc_15 (FF)
+  Source Clock:      mymips_INSTANCE/clk_4_11 rising
+  Destination Clock: mymips_INSTANCE/clk_4_11 rising
+
+  Data Path: mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_2_2 to mymips_INSTANCE/pc_INSTANCE/next_pc_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.591   1.089  mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_2_2 (mymips_INSTANCE/id_ex_INSTANCE/temp_Imme_2_2)
+     LUT4:I3->O            2   0.704   0.622  mymips_INSTANCE/alu_INSTANCE/output_and00021_SW0 (N749)
+     LUT4_D:I0->O         28   0.704   1.265  mymips_INSTANCE/alu_INSTANCE/output_and00021_1 (mymips_INSTANCE/alu_INSTANCE/output_and00021)
+     LUT4:I3->O            1   0.704   0.000  mymips_INSTANCE/alu_INSTANCE/output<15>129_SW0_F (N1749)
+     MUXF5:I0->O           2   0.321   0.451  mymips_INSTANCE/alu_INSTANCE/output<15>129_SW0 (N443)
+     LUT4_D:I3->O         12   0.704   0.996  mymips_INSTANCE/alu_INSTANCE/output<15>129 (mymips_INSTANCE/alu_INSTANCE/N01)
+     LUT4:I2->O            1   0.704   0.424  mymips_INSTANCE/alu_INSTANCE/output<12>173_SW0 (N1463)
+     LUT4:I3->O            1   0.704   0.424  mymips_INSTANCE/alu_INSTANCE/output<12>254_SW0 (N1008)
+     LUT4:I3->O            4   0.704   0.591  mymips_INSTANCE/alu_INSTANCE/output<12>275 (mymips_INSTANCE/ALUoutput<12>)
+     LUT4:I3->O            4   0.704   0.591  mymips_INSTANCE/regfile_INSTANCE/readData1<12>55 (mymips_INSTANCE/readData1<12>)
+     LUT4:I3->O            3   0.704   0.566  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>1124_SW0 (N447)
+     LUT4:I2->O            1   0.704   0.424  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>148_SW1 (N1535)
+     LUT4_D:I3->O         15   0.704   1.021  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>1124 (mymips_INSTANCE/branch_INSTANCE/N02)
+     LUT4:I3->O            1   0.704   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_lut<1> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<1> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<2> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<3> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<4> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<5> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<6> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<7> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<8> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<9> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<10> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<11> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<12> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<13> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.451  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_xor<14> (mymips_INSTANCE/branch_INSTANCE/ctrl_pc_addsub0000<14>)
+     LUT4:I3->O            1   0.704   0.000  mymips_INSTANCE/pc_INSTANCE/temp_pc_mux0000<14>40 (mymips_INSTANCE/pc_INSTANCE/temp_pc_mux0000<14>)
+     MUXCY:S->O            0   0.464   0.000  mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_cy<14> (mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.000  mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_xor<15> (mymips_INSTANCE/pc_INSTANCE/next_pc_add0000<15>)
+     FDC:D                     0.308          mymips_INSTANCE/pc_INSTANCE/next_pc_15
+    ----------------------------------------
+    Total                     22.531ns (13.616ns logic, 8.915ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mymips_INSTANCE/clk_16_31'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.871ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       mymips_INSTANCE/flash_INSTANCE/flash_addr_1 (FF)
+  Destination Clock: mymips_INSTANCE/clk_16_31 rising
+
+  Data Path: rst to mymips_INSTANCE/flash_INSTANCE/flash_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            93   1.218   1.360  rst_IBUF (rst_IBUF)
+     LUT3:I1->O           16   0.704   1.034  mymips_INSTANCE/flash_INSTANCE/flash_addr_and00001 (mymips_INSTANCE/flash_INSTANCE/flash_addr_and0000)
+     FDE:CE                    0.555          mymips_INSTANCE/flash_INSTANCE/flash_addr_1
+    ----------------------------------------
+    Total                      4.871ns (2.477ns logic, 2.394ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mymips_INSTANCE/clk_4_11'
+  Total number of paths / destination ports: 1127205 / 457
+-------------------------------------------------------------------------
+Offset:              24.898ns (Levels of Logic = 32)
+  Source:            rst (PAD)
+  Destination:       mymips_INSTANCE/pc_INSTANCE/next_pc_15 (FF)
+  Destination Clock: mymips_INSTANCE/clk_4_11 rising
+
+  Data Path: rst to mymips_INSTANCE/pc_INSTANCE/next_pc_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            93   1.218   1.360  rst_IBUF (rst_IBUF)
+     LUT2:I1->O          123   0.704   1.326  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0>111 (is_booting_OBUF)
+     LUT4:I2->O            1   0.704   0.000  mymips_INSTANCE/id_INSTANCE/read_reg1<2>1102_F (N1993)
+     MUXF5:I0->O           1   0.321   0.455  mymips_INSTANCE/id_INSTANCE/read_reg1<2>1102 (mymips_INSTANCE/id_INSTANCE/read_reg1<2>1102)
+     LUT4:I2->O            3   0.704   0.610  mymips_INSTANCE/id_INSTANCE/read_reg1<2>1144_SW0 (N345)
+     LUT4:I1->O            6   0.704   0.673  mymips_INSTANCE/id_INSTANCE/read_reg1<0>21 (mymips_INSTANCE/id_INSTANCE/N111)
+     LUT4:I3->O            2   0.704   0.482  mymips_INSTANCE/id_INSTANCE/read_reg1<1>_1 (mymips_INSTANCE/id_INSTANCE/read_reg1<1>)
+     LUT4:I2->O            1   0.704   0.424  mymips_INSTANCE/regfile_INSTANCE/readData1_and000162_SW0_SW0 (N859)
+     LUT4:I3->O           16   0.704   1.034  mymips_INSTANCE/regfile_INSTANCE/readData1_and000162 (mymips_INSTANCE/regfile_INSTANCE/readData1_and0001)
+     MUXF5:S->O            1   0.739   0.424  mymips_INSTANCE/regfile_INSTANCE/readData1<13>21 (mymips_INSTANCE/regfile_INSTANCE/readData1<13>21)
+     LUT4:I3->O            4   0.704   0.666  mymips_INSTANCE/regfile_INSTANCE/readData1<13>55 (mymips_INSTANCE/readData1<13>)
+     LUT4:I1->O            3   0.704   0.566  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>1124_SW0 (N447)
+     LUT4:I2->O            1   0.704   0.424  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>148_SW1 (N1535)
+     LUT4_D:I3->O         15   0.704   1.021  mymips_INSTANCE/branch_INSTANCE/ctrl_pc_mux0007<15>1124 (mymips_INSTANCE/branch_INSTANCE/N02)
+     LUT4:I3->O            1   0.704   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_lut<1> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<1> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<2> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<3> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<4> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<5> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<6> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<7> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<8> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<9> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<10> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<11> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<12> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<13> (mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.451  mymips_INSTANCE/branch_INSTANCE/Madd_ctrl_pc_addsub0000_xor<14> (mymips_INSTANCE/branch_INSTANCE/ctrl_pc_addsub0000<14>)
+     LUT4:I3->O            1   0.704   0.000  mymips_INSTANCE/pc_INSTANCE/temp_pc_mux0000<14>40 (mymips_INSTANCE/pc_INSTANCE/temp_pc_mux0000<14>)
+     MUXCY:S->O            0   0.464   0.000  mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_cy<14> (mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.000  mymips_INSTANCE/pc_INSTANCE/Madd_next_pc_add0000_xor<15> (mymips_INSTANCE/pc_INSTANCE/next_pc_add0000<15>)
+     FDC:D                     0.308          mymips_INSTANCE/pc_INSTANCE/next_pc_15
+    ----------------------------------------
+    Total                     24.898ns (14.982ns logic, 9.916ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            ps2clk (PAD)
+  Destination:       keyboard_INSTANCE/key_instance/clk1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: ps2clk to keyboard_INSTANCE/key_instance/clk1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  ps2clk_IBUF (ps2clk_IBUF)
+     FD:D                      0.308          keyboard_INSTANCE/key_instance/clk1
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 17
+-------------------------------------------------------------------------
+Offset:              7.692ns (Levels of Logic = 4)
+  Source:            mymips_INSTANCE/clk_4_1 (FF)
+  Destination:       rdn (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mymips_INSTANCE/clk_4_1 to rdn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.591   0.932  mymips_INSTANCE/clk_4_1 (mymips_INSTANCE/clk_4_11)
+     LUT4:I0->O            6   0.704   0.748  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_wrn_mux00041 (mymips_INSTANCE/ram1_adapter_INSTANCE/_mux0000)
+     LUT3:I1->O            1   0.704   0.000  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux00051 (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux0005)
+     MUXF5:I1->O           1   0.321   0.420  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux0005_f5 (rdn_OBUF)
+     OBUF:I->O                 3.272          rdn_OBUF (rdn)
+    ----------------------------------------
+    Total                      7.692ns (5.592ns logic, 2.100ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mymips_INSTANCE/clk_16_31'
+  Total number of paths / destination ports: 319 / 107
+-------------------------------------------------------------------------
+Offset:              12.830ns (Levels of Logic = 6)
+  Source:            mymips_INSTANCE/flash_INSTANCE/temp_addr_10 (FF)
+  Destination:       ram2_addr_o<0> (PAD)
+  Source Clock:      mymips_INSTANCE/clk_16_31 rising
+
+  Data Path: mymips_INSTANCE/flash_INSTANCE/temp_addr_10 to ram2_addr_o<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            97   0.591   1.458  mymips_INSTANCE/flash_INSTANCE/temp_addr_10 (mymips_INSTANCE/flash_INSTANCE/temp_addr_10)
+     LUT3_D:I0->O         33   0.704   1.438  mymips_INSTANCE/mem_INSTANCE/RamData_o<0>111 (N131)
+     LUT4:I0->O           17   0.704   1.055  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_and00001 (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_not0001_inv)
+     LUT4:I3->O            2   0.704   0.482  mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o<0>1 (ram1_addr_o_0_OBUF)
+     LUT4:I2->O            1   0.704   0.595  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0>_SW0 (N56)
+     LUT4:I0->O            1   0.704   0.420  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0> (ram2_addr_o_0_OBUF)
+     OBUF:I->O                 3.272          ram2_addr_o_0_OBUF (ram2_addr_o<0>)
+    ----------------------------------------
+    Total                     12.830ns (7.383ns logic, 5.447ns route)
+                                       (57.5% logic, 42.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mymips_INSTANCE/clk_4_11'
+  Total number of paths / destination ports: 1080 / 72
+-------------------------------------------------------------------------
+Offset:              12.754ns (Levels of Logic = 7)
+  Source:            mymips_INSTANCE/ex_mem_INSTANCE/temp_ALUAns_3 (FF)
+  Destination:       ram2_addr_o<0> (PAD)
+  Source Clock:      mymips_INSTANCE/clk_4_11 rising
+
+  Data Path: mymips_INSTANCE/ex_mem_INSTANCE/temp_ALUAns_3 to ram2_addr_o<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.591   0.808  mymips_INSTANCE/ex_mem_INSTANCE/temp_ALUAns_3 (mymips_INSTANCE/ex_mem_INSTANCE/temp_ALUAns_3)
+     LUT4:I0->O            1   0.704   0.595  mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o_cmp_eq0000141 (mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o_cmp_eq0000141)
+     LUT4:I0->O            7   0.704   0.712  mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o_cmp_eq0000155 (N8)
+     LUT4:I3->O           17   0.704   1.055  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_and00001 (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_not0001_inv)
+     LUT4:I3->O            2   0.704   0.482  mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o<0>1 (ram1_addr_o_0_OBUF)
+     LUT4:I2->O            1   0.704   0.595  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0>_SW0 (N56)
+     LUT4:I0->O            1   0.704   0.420  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0> (ram2_addr_o_0_OBUF)
+     OBUF:I->O                 3.272          ram2_addr_o_0_OBUF (ram2_addr_o<0>)
+    ----------------------------------------
+    Total                     12.754ns (8.087ns logic, 4.667ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mymips_INSTANCE/ex_mem_INSTANCE/temp_MEMControl.memWrite'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.848ns (Levels of Logic = 3)
+  Source:            mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn (LATCH)
+  Destination:       rdn (PAD)
+  Source Clock:      mymips_INSTANCE/ex_mem_INSTANCE/temp_MEMControl.memWrite falling
+
+  Data Path: mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn to rdn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             1   0.676   0.455  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn)
+     LUT4:I2->O            1   0.704   0.000  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux00052 (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux00051)
+     MUXF5:I0->O           1   0.321   0.420  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_rdn_mux0005_f5 (rdn_OBUF)
+     OBUF:I->O                 3.272          rdn_OBUF (rdn)
+    ----------------------------------------
+    Total                      5.848ns (4.973ns logic, 0.875ns route)
+                                       (85.0% logic, 15.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 270 / 73
+-------------------------------------------------------------------------
+Delay:               13.360ns (Levels of Logic = 7)
+  Source:            rst (PAD)
+  Destination:       ram2_addr_o<0> (PAD)
+
+  Data Path: rst to ram2_addr_o<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            93   1.218   1.360  rst_IBUF (rst_IBUF)
+     LUT3_D:I1->O         33   0.704   1.438  mymips_INSTANCE/mem_INSTANCE/RamData_o<0>111 (N131)
+     LUT4:I0->O           17   0.704   1.055  mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_and00001 (mymips_INSTANCE/ram1_adapter_INSTANCE/temp_mem_data_not0001_inv)
+     LUT4:I3->O            2   0.704   0.482  mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o<0>1 (ram1_addr_o_0_OBUF)
+     LUT4:I2->O            1   0.704   0.595  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0>_SW0 (N56)
+     LUT4:I0->O            1   0.704   0.420  mymips_INSTANCE/ram2_adapter_INSTANCE/temp_ram2_addr_mux0004<0> (ram2_addr_o_0_OBUF)
+     OBUF:I->O                 3.272          ram2_addr_o_0_OBUF (ram2_addr_o<0>)
+    ----------------------------------------
+    Total                     13.360ns (8.010ns logic, 5.350ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.78 secs
+ 
+--> 
+
+Total memory usage is 344872 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/works/jiyuan/myCPU_3/myCPU/mymips_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="mymips" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/mymips/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/id_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/id_inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_inst[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/regfile_INSTANCE/regs[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">regs[3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/regfile_INSTANCE/regs[7]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[7]</obj_property>
+      <obj_property name="ObjectShortName">regs[7]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/regfile_INSTANCE/regs[6]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[6]</obj_property>
+      <obj_property name="ObjectShortName">regs[6]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mymips/regfile_INSTANCE/regs[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">regs[4]</obj_property>
+   </wvobject>
+</wave_config>

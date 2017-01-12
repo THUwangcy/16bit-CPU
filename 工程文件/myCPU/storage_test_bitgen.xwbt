@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\sword\Desktop\myCPU_3\myCPU\storage_test.ncd
+OUTFILE=C:\Users\sword\Desktop\myCPU_3\myCPU\storage_test.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=C:\Users\sword\Desktop\myCPU_3\myCPU
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

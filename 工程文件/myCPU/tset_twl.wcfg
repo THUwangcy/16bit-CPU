@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/works/jiyuan/myCPU_3/myCPU/test_minsopc_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_minsopc" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/test_minsopc/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/pc_INSTANCE/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/read_reg1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/read_reg2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/imme" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imme[15:0]</obj_property>
+      <obj_property name="ObjectShortName">imme[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/write_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">write_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/alu_INSTANCE/output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">output[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/alu_INSTANCE/mem_regwrite_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_regwrite_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_regwrite_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">regs[3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[7]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[7]</obj_property>
+      <obj_property name="ObjectShortName">regs[7]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[6]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[6]</obj_property>
+      <obj_property name="ObjectShortName">regs[6]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">regs[4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_wb_INSTANCE/regwritedata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regwritedata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">regwritedata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/regwrite_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regwrite_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">regwrite_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_wb_INSTANCE/wb_regwrite" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_regwrite[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_regwrite[3:0]</obj_property>
+   </wvobject>
+</wave_config>

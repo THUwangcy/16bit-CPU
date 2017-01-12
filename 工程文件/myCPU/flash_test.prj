@@ -1,0 +1,3 @@
+vhdl work "type_lib.vhd"
+vhdl work "flash_io.vhd"
+vhdl work "flash_test.vhd"

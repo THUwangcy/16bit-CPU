@@ -1,0 +1,919 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    20:35:22 11/18/2016 
+-- Design Name: 
+-- Module Name:    Ram2 - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_arith.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use work.type_lib.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity Ram2 is
+    Port (  addr : in  STD_LOGIC_VECTOR (15 downto 0);
+    --	    data_i : in  STD_LOGIC_VECTOR (15 downto 0);
+     --      mem_addr : in  STD_LOGIC_VECTOR (15 downto 0);
+     --      mem_data : in  STD_LOGIC_VECTOR (15 downto 0);
+           
+     --      clk : in  STD_LOGIC;
+            control : in  ram_control;
+
+            inst_io : inout  STD_LOGIC_VECTOR (15 downto 0));
+end Ram2;
+
+architecture Behavioral of Ram2 is
+	signal inst_mem : RAM := (others => (others => '1'));
+begin
+	--test addiu3 twl test 数据前推
+	--inst_mem(0) <= "0100011101100010";
+	--inst_mem(1) <= "0100011101100010";
+	--inst_mem(2) <= "0100011100100011";
+	--inst_mem(3) <= (others => '1');
+	--inst_mem(4) <= (others => '1');
+	--inst_mem(5) <= "0100001101100000";
+	--inst_mem(6) <= "0100000100100000";
+
+	--test sw  lw
+	--inst_mem(0) <= Zero_16;
+	--inst_mem(1) <= "0100011101100010";    --addiu3 $7 $3 2    赋$3为2
+	--inst_mem(2) <= (others => '1');
+	--inst_mem(3) <= (others => '1');
+	--inst_mem(4) <= (others => '1');
+	--inst_mem(5) <= "1101100101100001";    --sw $1 $3 1   将$3中的赋值到MEM[$1 + 1]中
+	--inst_mem(6) <= "1001100100100001";    --lw $1 $1 1   将MEM[$1 + 1]赋值到$1中
+	--inst_mem(7) <= (others => '1');
+	--inst_mem(8) <= (others => '1');
+	--inst_mem(9) <= (others => '1');
+	--inst_mem(10) <= "0100000101000001";   --addiu3 $1 $2 1   读$1再加1赋值到$2中
+	
+	
+	--twl test 数据前推 addiu3
+	--inst_mem(0) <= Zero_16;
+	--inst_mem(1) <= "0100011101100010";
+	--inst_mem(2) <= "0100001111100100";
+	--inst_mem(3) <= "0100001111000100";
+	--inst_mem(4) <= "0100001110000100";
+	--inst_mem(5) <= "0100001110000100";
+	--inst_mem(6) <= "0100001110000100";
+	--inst_mem(7) <= "0100001110000100";
+	--inst_mem(8) <= "0100001110000100";
+	
+	--所有单条逻辑运算指令测试
+--	inst_mem(0) <= Zero_16;
+--	--ADDIU			
+--	inst_mem(1) <= "0100101100000001"; --r3=1
+--	inst_mem(2) <= (others => '1');
+--	inst_mem(3) <= (others => '1');
+--	inst_mem(4) <= (others => '1');
+--	inst_mem(5) <= (others => '1');
+--	--ADDIU3
+--	inst_mem(6) <= "0100011101100001"; --r3=r7+1=1
+--	inst_mem(7) <= (others => '1');
+--	inst_mem(8) <= (others => '1');
+--	inst_mem(9) <= (others => '1');
+--	inst_mem(10) <= (others => '1');
+--	--ADDSP
+--	inst_mem(11) <= "0110001100000001"; --sp r8=r8+1=1
+--	inst_mem(12) <= (others => '1');
+--	inst_mem(13) <= (others => '1');
+--	inst_mem(14) <= (others => '1');
+--	inst_mem(15) <= (others => '1');
+--	--ADDU
+--	inst_mem(16) <= "0100111100000001"; --r7=1
+--	inst_mem(17) <= "0100111000000001"; --r6=1
+--	inst_mem(18) <= "1110011111001101"; --r3=r7+r6=10
+--	inst_mem(19) <= (others => '1');
+--	inst_mem(20) <= (others => '1');
+--	inst_mem(21) <= (others => '1');
+	--inst_mem(22) <= (others => '1');
+	--AND
+	--inst_mem(23) <= "1110101111101100"; --r3=r7&r3=01&10=00
+	--inst_mem(24) <= (others => '1');
+	--inst_mem(25) <= (others => '1');
+	--inst_mem(26) <= (others => '1');
+	--inst_mem(27) <= (others => '1');
+	--OR
+	--inst_mem(28) <= "1110101111001101"; --r3=r3|r6=0|1=1
+	--inst_mem(29) <= (others => '1');
+	--inst_mem(30) <= (others => '1');
+	--inst_mem(31) <= (others => '1');
+	--inst_mem(32) <= (others => '1');
+	--下面为移位指令
+	--SLL
+	--inst_mem(33) <= "0011001111100100"; --r3=r7<<1=10
+	--inst_mem(34) <= (others => '1');
+	--inst_mem(35) <= (others => '1');
+	--inst_mem(36) <= (others => '1');
+	--inst_mem(37) <= (others => '1');
+	--SLLV
+	--inst_mem(38) <= "1110111101100100"; --r3=r7<<r3=01<<10=100
+	--inst_mem(39) <= (others => '1');
+	--inst_mem(40) <= (others => '1');
+	--inst_mem(41) <= (others => '1');
+	--inst_mem(42) <= (others => '1');
+	--SLT
+	--inst_mem(43) <= "1110111101100010"; --r11=(r7<r3)=1
+	--inst_mem(44) <= (others => '1');
+	--inst_mem(45) <= (others => '1');
+	--inst_mem(46) <= (others => '1');
+	--inst_mem(47) <= (others => '1');
+	--SRA
+	--inst_mem(48) <= "0011001111100111"; --r3=r7>>1(arith)=01>>1=00
+	--inst_mem(49) <= (others => '1');
+	--inst_mem(50) <= (others => '1');
+	--inst_mem(51) <= (others => '1');
+	--inst_mem(52) <= (others => '1');
+	--SRLV
+	--inst_mem(53) <= "1110111101100110"; --r3=r3>>r7(logic)=00>>01=00 
+	--inst_mem(54) <= (others => '1');
+	--inst_mem(55) <= (others => '1');
+	--inst_mem(56) <= (others => '1');
+	--inst_mem(57) <= (others => '1');
+	--SUBU
+	--inst_mem(58) <= "1110011111001111"; --r3=r7-r6=01-01=0
+	--inst_mem(59) <= (others => '1');
+	--inst_mem(60) <= (others => '1');
+	--inst_mem(61) <= (others => '1');
+	--inst_mem(62) <= (others => '1');
+	--
+	--inst_mem(63) <= (others => '1'); 
+	--inst_mem(64) <= (others => '1');
+	--inst_mem(65) <= (others => '1');
+	--inst_mem(66) <= (others => '1');
+	--inst_mem(67) <= (others => '1');
+	--inst_mem(68) <= (others => '1');
+	--inst_mem(69) <= (others => '1');
+	
+	
+	
+	
+	--addiu3 连续四个写011，连续四个读011
+	--inst_mem(0) <= Zero_16;
+	--inst_mem(1) <= "0100001101100001";
+	--inst_mem(2) <= "0100001101100001";
+	--inst_mem(3) <= "0100001101100001";
+	--inst_mem(4) <= "0100001101100001";
+	--inst_mem(5) <= "0100001111100001";
+	--inst_mem(6) <= "0100001111000010";
+	--inst_mem(7) <= "0100001110000011";
+	--inst_mem(8) <= "0100001110000100";
+	
+	
+--	--全逻辑运算类指令
+--		inst_mem(0) <= Zero_16;
+--	--ADDIU			
+--	inst_mem(1) <= "0100101100000001"; --r3=1
+--	inst_mem(2) <= (others => '1');
+--	inst_mem(3) <= (others => '1');
+--	inst_mem(4) <= (others => '1');
+--	inst_mem(5) <= (others => '1');
+--	--ADDIU3
+--	inst_mem(6) <= "0100011101100001"; --r3=r7+1=1
+--	inst_mem(7) <= (others => '1');
+--	inst_mem(8) <= (others => '1');
+--	inst_mem(9) <= (others => '1');
+--	inst_mem(10) <= (others => '1');
+--	--ADDSP
+--	inst_mem(11) <= "0110001100000001"; --sp r8=r8+1=1
+--	inst_mem(12) <= (others => '1');
+--	inst_mem(13) <= (others => '1');
+--	inst_mem(14) <= (others => '1');
+--	inst_mem(15) <= (others => '1');
+--	--ADDU
+--	inst_mem(16) <= "0100111100000001"; --r7=1
+--	inst_mem(17) <= "0100111000000001"; --r6=1
+--	inst_mem(18) <= "1110011111001101"; --r3=r7+r6=10
+--	inst_mem(19) <= (others => '1');
+--	inst_mem(20) <= (others => '1');
+--	inst_mem(21) <= (others => '1');
+--	inst_mem(22) <= (others => '1');
+--	--AND
+--	inst_mem(23) <= "1110101111101100"; --r3=r7&r3=01&10=00
+--	inst_mem(24) <= (others => '1');
+--	inst_mem(25) <= (others => '1');
+--	inst_mem(26) <= (others => '1');
+--	inst_mem(27) <= (others => '1');
+--	--OR
+--	inst_mem(28) <= "1110101111001101"; --r3=r3|r6=0|1=1
+--	inst_mem(29) <= (others => '1');
+--	inst_mem(30) <= (others => '1');
+--	inst_mem(31) <= (others => '1');
+--	inst_mem(32) <= (others => '1');
+--	--下面为移位指令
+--	--SLL
+--	inst_mem(33) <= "0011001111100100"; --r3=r7<<1=10
+--	inst_mem(34) <= (others => '1');
+--	inst_mem(35) <= (others => '1');
+--	inst_mem(36) <= (others => '1');
+--	inst_mem(37) <= (others => '1');
+--	--SLLV
+--	inst_mem(38) <= "1110111101100100"; --r3=r7<<r3=01<<10=100
+--	inst_mem(39) <= (others => '1');
+--	inst_mem(40) <= (others => '1');
+--	inst_mem(41) <= (others => '1');
+--	inst_mem(42) <= (others => '1');
+--	--SLT
+--	inst_mem(43) <= "1110111101100010"; --r11=(r7<r3)=1
+--	inst_mem(44) <= (others => '1');
+--	inst_mem(45) <= (others => '1');
+--	inst_mem(46) <= (others => '1');
+--	inst_mem(47) <= (others => '1');
+--	--SRA
+--	inst_mem(48) <= "0011001111100111"; --r3=r7>>1(arith)=01>>1=00
+--	inst_mem(49) <= (others => '1');
+--	inst_mem(50) <= (others => '1');
+--	inst_mem(51) <= (others => '1');
+--	inst_mem(52) <= (others => '1');
+--	--SRLV
+--	inst_mem(53) <= "1110111101100110"; --r3=r3>>r7(logic)=00>>01=00 
+--	inst_mem(54) <= (others => '1');
+--	inst_mem(55) <= (others => '1');
+--	inst_mem(56) <= (others => '1');
+--	inst_mem(57) <= (others => '1');
+--	--SUBU
+--	inst_mem(58) <= "1110011111001111"; --r3=r7-r6=01-01=0
+--	inst_mem(59) <= (others => '1');
+--	inst_mem(60) <= (others => '1');
+--	inst_mem(61) <= (others => '1');
+--	inst_mem(62) <= (others => '1');
+--	--
+--	inst_mem(63) <= (others => '1'); 
+--	inst_mem(64) <= (others => '1');
+--	inst_mem(65) <= (others => '1');
+--	inst_mem(66) <= (others => '1');
+--	inst_mem(67) <= (others => '1');
+--	inst_mem(68) <= (others => '1');
+--	inst_mem(69) <= (others => '1');
+
+	
+	
+	--twl>
+
+
+	--test addiu3
+--	inst_mem(0) <= "0100011101100010";
+--	inst_mem(1) <= "0100011101100010";
+--	inst_mem(2) <= "0100011100100011";
+--	inst_mem(3) <= (others => '1');
+--	inst_mem(4) <= (others => '1');
+--	inst_mem(5) <= "0100001101100000";
+--	inst_mem(6) <= "0100000100100000";
+
+	--test sw  lw
+--	inst_mem(0) <= Zero_16;
+--	inst_mem(1) <= "0100011101100011";    --addiu3 $7 $3 2    赋$3为2
+--	inst_mem(2) <= (others => '1');
+--	inst_mem(3) <= (others => '1');
+--	inst_mem(4) <= (others => '1');
+--	inst_mem(5) <= "1101100101100111";    --sw $1 $3 1   将$3中的赋值到MEM[$1 + 1]中
+--	inst_mem(6) <= "1001100100100110";    --lw $1 $1 1   将MEM[$1 + 1]赋值到$1中
+--	inst_mem(7) <= "0100000101000001";
+--	inst_mem(8) <= (others => '1');
+--	inst_mem(9) <= (others => '1');
+--	inst_mem(10) <= "0100000101000001";   --addiu3 $1 $2 1   读$1再加1赋值到$2中
+	
+
+	--写操作,这里和上面直接赋初值会产生冲突
+	process(inst_io, addr, control)
+	begin
+	--	if(clk'event and clk = '1') then
+			if(control.EN = '0' and control.WE = '0') then 
+				inst_mem(CONV_INTEGER(addr)) <= inst_io;
+			end if;
+	--	end if;
+	end process;
+	
+	--读操作
+	process(addr, control)
+		variable temp_inst : STD_LOGIC_VECTOR (15 downto 0) := HighZ_16;
+	begin 
+		if(control.EN = '1') then
+			temp_inst := HighZ_16;
+		elsif(control.OE = '0') then
+			case(CONV_INTEGER(addr)) is
+--				when 0 => temp_inst := Zero_16;
+--				when 1 => temp_inst := "0100011101100011";    --addiu3 $7 $3 3    赋$3为3
+--				when 2 => temp_inst := "1101100101101111";    --sw $1 $3 15   将$3中的赋值到MEM[$1 + 15]中，会发生结构冲突
+--				when 3 => temp_inst := "1001100100101111";    --lw $1 $1 15   将MEM[$1 + 15]赋值到$1中，会发生结构冲突
+--				when 4 => temp_inst := "0100000101000001";    --addiu3 $1 $2 1   读$1再加1赋值到$2中，这里会产生load相关冒险
+--				when 5 => temp_inst := "0100001001000001";   --addiu3 $2 $2 1   读$2再加1赋值到$2中
+--				when 6 => temp_inst := "1110100000000000";   --jump到初始地址0
+--				when 7 => temp_inst := (others => '1');
+--				
+				
+				--斐波那契
+--				when 0 => temp_inst := "0110100100000001";
+--				when 1 => temp_inst := "0110101000000001";
+--				when 2 => temp_inst := "0110101110000000";
+--				when 3 => temp_inst := "0011001101100000";
+--				when 4 => temp_inst := "0110110000001001";
+--				when 5 => temp_inst := "1101101100100000";
+--				when 6 => temp_inst := "1101101101000001";
+--				when 7 => temp_inst := "1110000101000101";
+--				when 8 => temp_inst := "1110000101001001";
+--				when 9 => temp_inst := "0100101100000010";
+--				when 10 => temp_inst:= "0100110011111111";
+--				when 11 => temp_inst:= "0010110011111001";
+
+				
+				
+				
+				-- li $3 01
+				-- li $4 00
+				-- b 000|01
+				-- b 111|FE
+				-- b eqz 011 01
+				-- b eqz 100 01
+				
+--				when 0 => temp_inst := zero_16;
+--				when 1 => temp_inst := "0110101100000001";
+--				when 2 => temp_inst := "0110110000000000";
+--				when 3 => temp_inst := "0010001100000011";
+--				when 4 => temp_inst := (others => '1');
+
+
+				when 0 => temp_inst := "0110100100000001";
+				when 1 => temp_inst := "0110101000000001";
+				when 2 => temp_inst := "0110101110000101";
+				when 3 => temp_inst := "0011001101100000";
+				when 4 => temp_inst := "0110110000001001";
+				when 5 => temp_inst := "1101101100100000";
+				when 6 => temp_inst := "1101101101000001";
+				when 7 => temp_inst := "1110000101000101";
+				when 8 => temp_inst := "1110000101001001";
+				when 9 => temp_inst := "0100101100000010";
+				when 10 => temp_inst:= "0100110011111111";
+				when 11 => temp_inst:= "0010110011111001";
+
+--				               when 0 => temp_inst := "0000000000000000";
+--               when 1 => temp_inst := "0000000000000000";
+--               when 2 => temp_inst := "0000100000000000";
+--               when 3 => temp_inst := "0001000001100001";
+--               when 4 => temp_inst := "0000100000000000";
+--               when 5 => temp_inst := "0000100000000000";
+--               when 6 => temp_inst := "0000100000000000";
+--               when 7 => temp_inst := "0000100000000000";
+--               when 8 => temp_inst := "0110111010111111";
+--               when 9 => temp_inst := "0011011011000000";
+--               when 10 => temp_inst := "0100111000010000";
+--               when 11 => temp_inst := "1101111000000000";
+--               when 12 => temp_inst := "1101111000100001";
+--               when 13 => temp_inst := "1101111001000010";
+--               when 14 => temp_inst := "1101111010000100";
+--               when 15 => temp_inst := "1101111010100101";
+--               when 16 => temp_inst := "1001000100000000";
+--               when 17 => temp_inst := "0110001100000001";
+--               when 18 => temp_inst := "0110100011111111";
+--               when 19 => temp_inst := "1110100100001100";
+--               when 20 => temp_inst := "1001001000000000";
+--               when 21 => temp_inst := "0110001100000001";
+--               when 22 => temp_inst := "0110001111111111";
+--               when 23 => temp_inst := "1101001100000000";
+--               when 24 => temp_inst := "0110001111111111";
+--               when 25 => temp_inst := "1101011100000000";
+--               when 26 => temp_inst := "0110101100001111";
+--               when 27 => temp_inst := "1110111101000000";
+--               when 28 => temp_inst := "0100111100000011";
+--               when 29 => temp_inst := "0000100000000000";
+--               when 30 => temp_inst := "0001000010101100";
+--               when 31 => temp_inst := "0000100000000000";
+--               when 32 => temp_inst := "0110111010111111";
+--               when 33 => temp_inst := "0011011011000000";
+--               when 34 => temp_inst := "1101111001100000";
+--               when 35 => temp_inst := "0000100000000000";
+--               when 36 => temp_inst := "0110111010111111";
+--               when 37 => temp_inst := "0011011011000000";
+--               when 38 => temp_inst := "0100111000010000";
+--               when 39 => temp_inst := "0110100000000000";
+--               when 40 => temp_inst := "1110100000101010";
+--               when 41 => temp_inst := "0110000100000010";
+--               when 42 => temp_inst := "0000100000000000";
+--               when 43 => temp_inst := "1001111010000111";
+--               when 44 => temp_inst := "0110100000100000";
+--               when 45 => temp_inst := "1110100000101010";
+--               when 46 => temp_inst := "0110000100000010";
+--               when 47 => temp_inst := "0000100000000000";
+--               when 48 => temp_inst := "1001111010001000";
+--               when 49 => temp_inst := "0110100000010000";
+--               when 50 => temp_inst := "1110100000101010";
+--               when 51 => temp_inst := "0110000100000010";
+--               when 52 => temp_inst := "0000100000000000";
+--               when 53 => temp_inst := "1001111010001001";
+--               when 54 => temp_inst := "0000100000000000";
+--               when 55 => temp_inst := "1001111010100110";
+--               when 56 => temp_inst := "1110110010100010";
+--               when 57 => temp_inst := "0110000100001011";
+--               when 58 => temp_inst := "0000100000000000";
+--               when 59 => temp_inst := "1101111010000110";
+--               when 60 => temp_inst := "1110111101000000";
+--               when 61 => temp_inst := "0100111100000011";
+--               when 62 => temp_inst := "0000100000000000";
+--               when 63 => temp_inst := "0001000010001011";
+--               when 64 => temp_inst := "0000100000000000";
+--               when 65 => temp_inst := "0110111010111111";
+--               when 66 => temp_inst := "0011011011000000";
+--               when 67 => temp_inst := "1101111000100000";
+--               when 68 => temp_inst := "0000100000000000";
+--               when 69 => temp_inst := "0000100000000000";
+--               when 70 => temp_inst := "0110101100001111";
+--               when 71 => temp_inst := "1110111101000000";
+--               when 72 => temp_inst := "0100111100000011";
+--               when 73 => temp_inst := "0000100000000000";
+--               when 74 => temp_inst := "0001000010000000";
+--               when 75 => temp_inst := "0000100000000000";
+--               when 76 => temp_inst := "0110111010111111";
+--               when 77 => temp_inst := "0011011011000000";
+--               when 78 => temp_inst := "1101111001100000";
+--               when 79 => temp_inst := "0000100000000000";
+--               when 80 => temp_inst := "0100001011000000";
+--               when 81 => temp_inst := "1111001100000000";
+--               when 82 => temp_inst := "0110100010000000";
+--               when 83 => temp_inst := "0011000000000000";
+--               when 84 => temp_inst := "1110101100001101";
+--               when 85 => temp_inst := "0110111110111111";
+--               when 86 => temp_inst := "0011011111100000";
+--               when 87 => temp_inst := "0100111100010000";
+--               when 88 => temp_inst := "1001111100000000";
+--               when 89 => temp_inst := "1001111100100001";
+--               when 90 => temp_inst := "1001111101000010";
+--               when 91 => temp_inst := "1001111110000100";
+--               when 92 => temp_inst := "1001111110100101";
+--               when 93 => temp_inst := "1001011100000000";
+--               when 94 => temp_inst := "0110001100000001";
+--               when 95 => temp_inst := "0110001100000001";
+--               when 96 => temp_inst := "0000100000000000";
+--               when 97 => temp_inst := "1111001100000001";
+--               when 98 => temp_inst := "1110111000000000";
+--               when 99 => temp_inst := "1001001111111111";
+--               when 100 => temp_inst := "0000100000000000";
+--               when 101 => temp_inst := "0110100000000111";
+--               when 102 => temp_inst := "1111000000000001";
+--               when 103 => temp_inst := "0110100010111111";
+--               when 104 => temp_inst := "0011000000000000";
+--               when 105 => temp_inst := "0100100000010000";
+--               when 106 => temp_inst := "0110010000000000";
+--               when 107 => temp_inst := "0000100000000000";
+--               when 108 => temp_inst := "0110111010111111";
+--               when 109 => temp_inst := "0011011011000000";
+--               when 110 => temp_inst := "0100111000010000";
+--               when 111 => temp_inst := "0110100000000000";
+--               when 112 => temp_inst := "1101111000000000";
+--               when 113 => temp_inst := "1101111000000001";
+--               when 114 => temp_inst := "1101111000000010";
+--               when 115 => temp_inst := "1101111000000011";
+--               when 116 => temp_inst := "1101111000000100";
+--               when 117 => temp_inst := "1101111000000101";
+--               when 118 => temp_inst := "1101111000000110";
+--               when 119 => temp_inst := "0100100000000001";
+--               when 120 => temp_inst := "1101111000000111";
+--               when 121 => temp_inst := "0100100000000001";
+--               when 122 => temp_inst := "1101111000001000";
+--               when 123 => temp_inst := "0100100000000001";
+--               when 124 => temp_inst := "1101111000001001";
+--               when 125 => temp_inst := "1110111101000000";
+--               when 126 => temp_inst := "0100111100000011";
+--               when 127 => temp_inst := "0000100000000000";
+--               when 128 => temp_inst := "0001000001001010";
+--               when 129 => temp_inst := "0110111010111111";
+--               when 130 => temp_inst := "0011011011000000";
+--               when 131 => temp_inst := "0110100001001111";
+--               when 132 => temp_inst := "1101111000000000";
+--               when 133 => temp_inst := "0000100000000000";
+--               when 134 => temp_inst := "1110111101000000";
+--               when 135 => temp_inst := "0100111100000011";
+--               when 136 => temp_inst := "0000100000000000";
+--               when 137 => temp_inst := "0001000001000001";
+--               when 138 => temp_inst := "0110111010111111";
+--               when 139 => temp_inst := "0011011011000000";
+--               when 140 => temp_inst := "0110100001001011";
+--               when 141 => temp_inst := "1101111000000000";
+--               when 142 => temp_inst := "0000100000000000";
+--               when 143 => temp_inst := "1110111101000000";
+--               when 144 => temp_inst := "0100111100000011";
+--               when 145 => temp_inst := "0000100000000000";
+--               when 146 => temp_inst := "0001000000111000";
+--               when 147 => temp_inst := "0110111010111111";
+--               when 148 => temp_inst := "0011011011000000";
+--               when 149 => temp_inst := "0110100000001010";
+--               when 150 => temp_inst := "1101111000000000";
+--               when 151 => temp_inst := "0000100000000000";
+--               when 152 => temp_inst := "1110111101000000";
+--               when 153 => temp_inst := "0100111100000011";
+--               when 154 => temp_inst := "0000100000000000";
+--               when 155 => temp_inst := "0001000000101111";
+--               when 156 => temp_inst := "0110111010111111";
+--               when 157 => temp_inst := "0011011011000000";
+--               when 158 => temp_inst := "0110100000001101";
+--               when 159 => temp_inst := "1101111000000000";
+--               when 160 => temp_inst := "0000100000000000";
+--               when 161 => temp_inst := "1110111101000000";
+--               when 162 => temp_inst := "0100111100000011";
+--               when 163 => temp_inst := "0000100000000000";
+--               when 164 => temp_inst := "0001000000110001";
+--               when 165 => temp_inst := "0000100000000000";
+--               when 166 => temp_inst := "0110111010111111";
+--               when 167 => temp_inst := "0011011011000000";
+--               when 168 => temp_inst := "1001111000100000";
+--               when 169 => temp_inst := "0110111011111111";
+--               when 170 => temp_inst := "1110100111001100";
+--               when 171 => temp_inst := "0000100000000000";
+--               when 172 => temp_inst := "0110100001010010";
+--               when 173 => temp_inst := "1110100000101010";
+--               when 174 => temp_inst := "0110000000110010";
+--               when 175 => temp_inst := "0000100000000000";
+--               when 176 => temp_inst := "0110100001000100";
+--               when 177 => temp_inst := "1110100000101010";
+--               when 178 => temp_inst := "0110000001001101";
+--               when 179 => temp_inst := "0000100000000000";
+--               when 180 => temp_inst := "0110100001000001";
+--               when 181 => temp_inst := "1110100000101010";
+--               when 182 => temp_inst := "0110000000001110";
+--               when 183 => temp_inst := "0000100000000000";
+--               when 184 => temp_inst := "0110100001010101";
+--               when 185 => temp_inst := "1110100000101010";
+--               when 186 => temp_inst := "0110000000000111";
+--               when 187 => temp_inst := "0000100000000000";
+--               when 188 => temp_inst := "0110100001000111";
+--               when 189 => temp_inst := "1110100000101010";
+--               when 190 => temp_inst := "0110000000001001";
+--               when 191 => temp_inst := "0000100000000000";
+--               when 192 => temp_inst := "0001011111100000";
+--               when 193 => temp_inst := "0000100000000000";
+--               when 194 => temp_inst := "0000100000000000";
+--               when 195 => temp_inst := "0001000011000000";
+--               when 196 => temp_inst := "0000100000000000";
+--               when 197 => temp_inst := "0000100000000000";
+--               when 198 => temp_inst := "0001000010000010";
+--               when 199 => temp_inst := "0000100000000000";
+--               when 200 => temp_inst := "0000100000000000";
+--               when 201 => temp_inst := "0001000100000011";
+--               when 202 => temp_inst := "0000100000000000";
+--               when 203 => temp_inst := "0000100000000000";
+--               when 204 => temp_inst := "0110111010111111";
+--               when 205 => temp_inst := "0011011011000000";
+--               when 206 => temp_inst := "0100111000000001";
+--               when 207 => temp_inst := "1001111000000000";
+--               when 208 => temp_inst := "0110111000000001";
+--               when 209 => temp_inst := "1110100011001100";
+--               when 210 => temp_inst := "0010000011111000";
+--               when 211 => temp_inst := "0000100000000000";
+--               when 212 => temp_inst := "1110111100000000";
+--               when 213 => temp_inst := "0000100000000000";
+--               when 214 => temp_inst := "0000100000000000";
+--               when 215 => temp_inst := "0110111010111111";
+--               when 216 => temp_inst := "0011011011000000";
+--               when 217 => temp_inst := "0100111000000001";
+--               when 218 => temp_inst := "1001111000000000";
+--               when 219 => temp_inst := "0110111000000010";
+--               when 220 => temp_inst := "1110100011001100";
+--               when 221 => temp_inst := "0010000011111000";
+--               when 222 => temp_inst := "0000100000000000";
+--               when 223 => temp_inst := "1110111100000000";
+--               when 224 => temp_inst := "0000100000000000";
+--               when 225 => temp_inst := "0110100100000110";
+--               when 226 => temp_inst := "0110101000000110";
+--               when 227 => temp_inst := "0110100010111111";
+--               when 228 => temp_inst := "0011000000000000";
+--               when 229 => temp_inst := "0100100000010000";
+--               when 230 => temp_inst := "1110001000101111";
+--               when 231 => temp_inst := "1110000001100001";
+--               when 232 => temp_inst := "1001100001100000";
+--               when 233 => temp_inst := "1110111101000000";
+--               when 234 => temp_inst := "0100111100000011";
+--               when 235 => temp_inst := "0000100000000000";
+--               when 236 => temp_inst := "0001011111011110";
+--               when 237 => temp_inst := "0000100000000000";
+--               when 238 => temp_inst := "0110111010111111";
+--               when 239 => temp_inst := "0011011011000000";
+--               when 240 => temp_inst := "1101111001100000";
+--               when 241 => temp_inst := "0011001101100011";
+--               when 242 => temp_inst := "1110111101000000";
+--               when 243 => temp_inst := "0100111100000011";
+--               when 244 => temp_inst := "0000100000000000";
+--               when 245 => temp_inst := "0001011111010101";
+--               when 246 => temp_inst := "0000100000000000";
+--               when 247 => temp_inst := "0110111010111111";
+--               when 248 => temp_inst := "0011011011000000";
+--               when 249 => temp_inst := "1101111001100000";
+--               when 250 => temp_inst := "0100100111111111";
+--               when 251 => temp_inst := "0000100000000000";
+--               when 252 => temp_inst := "0010100111100110";
+--               when 253 => temp_inst := "0000100000000000";
+--               when 254 => temp_inst := "0001011110100010";
+--               when 255 => temp_inst := "0000100000000000";
+--               when 256 => temp_inst := "1110111101000000";
+--               when 257 => temp_inst := "0100111100000011";
+--               when 258 => temp_inst := "0000100000000000";
+--               when 259 => temp_inst := "0001011111010010";
+--               when 260 => temp_inst := "0000100000000000";
+--               when 261 => temp_inst := "0110111010111111";
+--               when 262 => temp_inst := "0011011011000000";
+--               when 263 => temp_inst := "1001111010100000";
+--               when 264 => temp_inst := "0110111011111111";
+--               when 265 => temp_inst := "1110110111001100";
+--               when 266 => temp_inst := "0000100000000000";
+--               when 267 => temp_inst := "1110111101000000";
+--               when 268 => temp_inst := "0100111100000011";
+--               when 269 => temp_inst := "0000100000000000";
+--               when 270 => temp_inst := "0001011111000111";
+--               when 271 => temp_inst := "0000100000000000";
+--               when 272 => temp_inst := "0110111010111111";
+--               when 273 => temp_inst := "0011011011000000";
+--               when 274 => temp_inst := "1001111000100000";
+--               when 275 => temp_inst := "0110111011111111";
+--               when 276 => temp_inst := "1110100111001100";
+--               when 277 => temp_inst := "0000100000000000";
+--               when 278 => temp_inst := "0011000100100000";
+--               when 279 => temp_inst := "1110100110101101";
+--               when 280 => temp_inst := "1110111101000000";
+--               when 281 => temp_inst := "0100111100000011";
+--               when 282 => temp_inst := "0000100000000000";
+--               when 283 => temp_inst := "0001011110111010";
+--               when 284 => temp_inst := "0000100000000000";
+--               when 285 => temp_inst := "0110111010111111";
+--               when 286 => temp_inst := "0011011011000000";
+--               when 287 => temp_inst := "1001111010100000";
+--               when 288 => temp_inst := "0110111011111111";
+--               when 289 => temp_inst := "1110110111001100";
+--               when 290 => temp_inst := "0000100000000000";
+--               when 291 => temp_inst := "1110111101000000";
+--               when 292 => temp_inst := "0100111100000011";
+--               when 293 => temp_inst := "0000100000000000";
+--               when 294 => temp_inst := "0001011110101111";
+--               when 295 => temp_inst := "0000100000000000";
+--               when 296 => temp_inst := "0110111010111111";
+--               when 297 => temp_inst := "0011011011000000";
+--               when 298 => temp_inst := "1001111001000000";
+--               when 299 => temp_inst := "0110111011111111";
+--               when 300 => temp_inst := "1110101011001100";
+--               when 301 => temp_inst := "0000100000000000";
+--               when 302 => temp_inst := "0011001001000000";
+--               when 303 => temp_inst := "1110101010101101";
+--               when 304 => temp_inst := "1001100101100000";
+--               when 305 => temp_inst := "1110111101000000";
+--               when 306 => temp_inst := "0100111100000011";
+--               when 307 => temp_inst := "0000100000000000";
+--               when 308 => temp_inst := "0001011110010110";
+--               when 309 => temp_inst := "0000100000000000";
+--               when 310 => temp_inst := "0110111010111111";
+--               when 311 => temp_inst := "0011011011000000";
+--               when 312 => temp_inst := "1101111001100000";
+--               when 313 => temp_inst := "0011001101100011";
+--               when 314 => temp_inst := "1110111101000000";
+--               when 315 => temp_inst := "0100111100000011";
+--               when 316 => temp_inst := "0000100000000000";
+--               when 317 => temp_inst := "0001011110001101";
+--               when 318 => temp_inst := "0000100000000000";
+--               when 319 => temp_inst := "0110111010111111";
+--               when 320 => temp_inst := "0011011011000000";
+--               when 321 => temp_inst := "1101111001100000";
+--               when 322 => temp_inst := "0100100100000001";
+--               when 323 => temp_inst := "0100101011111111";
+--               when 324 => temp_inst := "0000100000000000";
+--               when 325 => temp_inst := "0010101011101010";
+--               when 326 => temp_inst := "0000100000000000";
+--               when 327 => temp_inst := "0001011101011001";
+--               when 328 => temp_inst := "0000100000000000";
+--               when 329 => temp_inst := "1110111101000000";
+--               when 330 => temp_inst := "0100111100000011";
+--               when 331 => temp_inst := "0000100000000000";
+--               when 332 => temp_inst := "0001011110001001";
+--               when 333 => temp_inst := "0000100000000000";
+--               when 334 => temp_inst := "0110111010111111";
+--               when 335 => temp_inst := "0011011011000000";
+--               when 336 => temp_inst := "1001111010100000";
+--               when 337 => temp_inst := "0110111011111111";
+--               when 338 => temp_inst := "1110110111001100";
+--               when 339 => temp_inst := "0000100000000000";
+--               when 340 => temp_inst := "1110111101000000";
+--               when 341 => temp_inst := "0100111100000011";
+--               when 342 => temp_inst := "0000100000000000";
+--               when 343 => temp_inst := "0001011101111110";
+--               when 344 => temp_inst := "0000100000000000";
+--               when 345 => temp_inst := "0110111010111111";
+--               when 346 => temp_inst := "0011011011000000";
+--               when 347 => temp_inst := "1001111000100000";
+--               when 348 => temp_inst := "0110111011111111";
+--               when 349 => temp_inst := "1110100111001100";
+--               when 350 => temp_inst := "0000100000000000";
+--               when 351 => temp_inst := "0011000100100000";
+--               when 352 => temp_inst := "1110100110101101";
+--               when 353 => temp_inst := "0110100000000000";
+--               when 354 => temp_inst := "1110100000101010";
+--               when 355 => temp_inst := "0110000000011101";
+--               when 356 => temp_inst := "0000100000000000";
+--               when 357 => temp_inst := "1110111101000000";
+--               when 358 => temp_inst := "0100111100000011";
+--               when 359 => temp_inst := "0000100000000000";
+--               when 360 => temp_inst := "0001011101101101";
+--               when 361 => temp_inst := "0000100000000000";
+--               when 362 => temp_inst := "0110111010111111";
+--               when 363 => temp_inst := "0011011011000000";
+--               when 364 => temp_inst := "1001111010100000";
+--               when 365 => temp_inst := "0110111011111111";
+--               when 366 => temp_inst := "1110110111001100";
+--               when 367 => temp_inst := "0000100000000000";
+--               when 368 => temp_inst := "1110111101000000";
+--               when 369 => temp_inst := "0100111100000011";
+--               when 370 => temp_inst := "0000100000000000";
+--               when 371 => temp_inst := "0001011101100010";
+--               when 372 => temp_inst := "0000100000000000";
+--               when 373 => temp_inst := "0110111010111111";
+--               when 374 => temp_inst := "0011011011000000";
+--               when 375 => temp_inst := "1001111001000000";
+--               when 376 => temp_inst := "0110111011111111";
+--               when 377 => temp_inst := "1110101011001100";
+--               when 378 => temp_inst := "0000100000000000";
+--               when 379 => temp_inst := "0011001001000000";
+--               when 380 => temp_inst := "1110101010101101";
+--               when 381 => temp_inst := "1101100101000000";
+--               when 382 => temp_inst := "0000100000000000";
+--               when 383 => temp_inst := "0001011111001001";
+--               when 384 => temp_inst := "0000100000000000";
+--               when 385 => temp_inst := "0000100000000000";
+--               when 386 => temp_inst := "0001011100011110";
+--               when 387 => temp_inst := "0000100000000000";
+--               when 388 => temp_inst := "1110111101000000";
+--               when 389 => temp_inst := "0100111100000011";
+--               when 390 => temp_inst := "0000100000000000";
+--               when 391 => temp_inst := "0001011101001110";
+--               when 392 => temp_inst := "0000100000000000";
+--               when 393 => temp_inst := "0110111010111111";
+--               when 394 => temp_inst := "0011011011000000";
+--               when 395 => temp_inst := "1001111010100000";
+--               when 396 => temp_inst := "0110111011111111";
+--               when 397 => temp_inst := "1110110111001100";
+--               when 398 => temp_inst := "0000100000000000";
+--               when 399 => temp_inst := "1110111101000000";
+--               when 400 => temp_inst := "0100111100000011";
+--               when 401 => temp_inst := "0000100000000000";
+--               when 402 => temp_inst := "0001011101000011";
+--               when 403 => temp_inst := "0000100000000000";
+--               when 404 => temp_inst := "0110111010111111";
+--               when 405 => temp_inst := "0011011011000000";
+--               when 406 => temp_inst := "1001111000100000";
+--               when 407 => temp_inst := "0110111011111111";
+--               when 408 => temp_inst := "1110100111001100";
+--               when 409 => temp_inst := "0000100000000000";
+--               when 410 => temp_inst := "0011000100100000";
+--               when 411 => temp_inst := "1110100110101101";
+--               when 412 => temp_inst := "1110111101000000";
+--               when 413 => temp_inst := "0100111100000011";
+--               when 414 => temp_inst := "0000100000000000";
+--               when 415 => temp_inst := "0001011100110110";
+--               when 416 => temp_inst := "0000100000000000";
+--               when 417 => temp_inst := "0110111010111111";
+--               when 418 => temp_inst := "0011011011000000";
+--               when 419 => temp_inst := "1001111010100000";
+--               when 420 => temp_inst := "0110111011111111";
+--               when 421 => temp_inst := "1110110111001100";
+--               when 422 => temp_inst := "0000100000000000";
+--               when 423 => temp_inst := "1110111101000000";
+--               when 424 => temp_inst := "0100111100000011";
+--               when 425 => temp_inst := "0000100000000000";
+--               when 426 => temp_inst := "0001011100101011";
+--               when 427 => temp_inst := "0000100000000000";
+--               when 428 => temp_inst := "0110111010111111";
+--               when 429 => temp_inst := "0011011011000000";
+--               when 430 => temp_inst := "1001111001000000";
+--               when 431 => temp_inst := "0110111011111111";
+--               when 432 => temp_inst := "1110101011001100";
+--               when 433 => temp_inst := "0000100000000000";
+--               when 434 => temp_inst := "0011001001000000";
+--               when 435 => temp_inst := "1110101010101101";
+--               when 436 => temp_inst := "1001100101100000";
+--               when 437 => temp_inst := "1110111101000000";
+--               when 438 => temp_inst := "0100111100000011";
+--               when 439 => temp_inst := "0000100000000000";
+--               when 440 => temp_inst := "0001011100010010";
+--               when 441 => temp_inst := "0000100000000000";
+--               when 442 => temp_inst := "0110111010111111";
+--               when 443 => temp_inst := "0011011011000000";
+--               when 444 => temp_inst := "1101111001100000";
+--               when 445 => temp_inst := "0011001101100011";
+--               when 446 => temp_inst := "1110111101000000";
+--               when 447 => temp_inst := "0100111100000011";
+--               when 448 => temp_inst := "0000100000000000";
+--               when 449 => temp_inst := "0001011100001001";
+--               when 450 => temp_inst := "0000100000000000";
+--               when 451 => temp_inst := "0110111010111111";
+--               when 452 => temp_inst := "0011011011000000";
+--               when 453 => temp_inst := "1101111001100000";
+--               when 454 => temp_inst := "0100100100000001";
+--               when 455 => temp_inst := "0100101011111111";
+--               when 456 => temp_inst := "0000100000000000";
+--               when 457 => temp_inst := "0010101011101010";
+--               when 458 => temp_inst := "0000100000000000";
+--               when 459 => temp_inst := "0001011011010101";
+--               when 460 => temp_inst := "0000100000000000";
+--               when 461 => temp_inst := "1110111101000000";
+--               when 462 => temp_inst := "0100111100000011";
+--               when 463 => temp_inst := "0000100000000000";
+--               when 464 => temp_inst := "0001011100000101";
+--               when 465 => temp_inst := "0000100000000000";
+--               when 466 => temp_inst := "0110111010111111";
+--               when 467 => temp_inst := "0011011011000000";
+--               when 468 => temp_inst := "1001111010100000";
+--               when 469 => temp_inst := "0110111011111111";
+--               when 470 => temp_inst := "1110110111001100";
+--               when 471 => temp_inst := "0000100000000000";
+--               when 472 => temp_inst := "1110111101000000";
+--               when 473 => temp_inst := "0100111100000011";
+--               when 474 => temp_inst := "0000100000000000";
+--               when 475 => temp_inst := "0001011011111010";
+--               when 476 => temp_inst := "0000100000000000";
+--               when 477 => temp_inst := "0110111010111111";
+--               when 478 => temp_inst := "0011011011000000";
+--               when 479 => temp_inst := "1001111001000000";
+--               when 480 => temp_inst := "0110111011111111";
+--               when 481 => temp_inst := "1110101011001100";
+--               when 482 => temp_inst := "0000100000000000";
+--               when 483 => temp_inst := "0011001001000000";
+--               when 484 => temp_inst := "1110101010101101";
+--               when 485 => temp_inst := "0100001011000000";
+--               when 486 => temp_inst := "0110111110111111";
+--               when 487 => temp_inst := "0011011111100000";
+--               when 488 => temp_inst := "0100111100010000";
+--               when 489 => temp_inst := "1001111110100101";
+--               when 490 => temp_inst := "0110001111111111";
+--               when 491 => temp_inst := "1101010100000000";
+--               when 492 => temp_inst := "1111010100000000";
+--               when 493 => temp_inst := "0110100110000000";
+--               when 494 => temp_inst := "0011000100100000";
+--               when 495 => temp_inst := "1110110100101101";
+--               when 496 => temp_inst := "1001111100000000";
+--               when 497 => temp_inst := "1001111100100001";
+--               when 498 => temp_inst := "1001111101000010";
+--               when 499 => temp_inst := "1001111101100011";
+--               when 500 => temp_inst := "1001111110000100";
+--               when 501 => temp_inst := "1110111101000000";
+--               when 502 => temp_inst := "0100111100000100";
+--               when 503 => temp_inst := "1111010100000001";
+--               when 504 => temp_inst := "1110111000000000";
+--               when 505 => temp_inst := "1001010100000000";
+--               when 506 => temp_inst := "0000100000000000";
+--               when 507 => temp_inst := "0000100000000000";
+--               when 508 => temp_inst := "0110001100000001";
+--               when 509 => temp_inst := "0110111110111111";
+--               when 510 => temp_inst := "0011011111100000";
+--               when 511 => temp_inst := "0100111100010000";
+--               when 512 => temp_inst := "1101111100000000";
+--               when 513 => temp_inst := "1101111100100001";
+--               when 514 => temp_inst := "1101111101000010";
+--               when 515 => temp_inst := "1101111101100011";
+--               when 516 => temp_inst := "1101111110000100";
+--               when 517 => temp_inst := "1101111110100101";
+--               when 518 => temp_inst := "1111000000000000";
+--               when 519 => temp_inst := "0110100101111111";
+--               when 520 => temp_inst := "0011000100100000";
+--               when 521 => temp_inst := "0110101011111111";
+--               when 522 => temp_inst := "1110100101001101";
+--               when 523 => temp_inst := "1110100000101100";
+--               when 524 => temp_inst := "1111000000000001";
+--               when 525 => temp_inst := "0110100100000111";
+--               when 526 => temp_inst := "1110111101000000";
+--               when 527 => temp_inst := "0100111100000011";
+--               when 528 => temp_inst := "0000100000000000";
+--               when 529 => temp_inst := "0001011010111001";
+--               when 530 => temp_inst := "0000100000000000";
+--               when 531 => temp_inst := "0110111010111111";
+--               when 532 => temp_inst := "0011011011000000";
+--               when 533 => temp_inst := "1101111000100000";
+--               when 534 => temp_inst := "0001011010001010";
+--               when 535 => temp_inst := "0000100000000000";
+
+				
+				when others => temp_inst := inst_mem(CONV_INTEGER(addr));
+			end case;
+		else
+			temp_inst := HighZ_16;
+		end if;
+		
+		inst_io <= temp_inst;
+	end process;
+
+end Behavioral;
+

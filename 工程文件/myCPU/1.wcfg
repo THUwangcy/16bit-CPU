@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/works/jiyuan/myCPU_3/myCPU/test_minsopc_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_minsopc" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="44" />
+   <wvobject fp_name="/test_minsopc/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/ram2_INSTANCE/inst_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/if_id_INSTANCE/id_inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_inst[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/read_reg1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/read_reg2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/imme" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imme[15:0]</obj_property>
+      <obj_property name="ObjectShortName">imme[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/write_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">write_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/control_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_id</obj_property>
+      <obj_property name="ObjectShortName">control_id</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/control_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_ex</obj_property>
+      <obj_property name="ObjectShortName">control_ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/control_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_mem</obj_property>
+      <obj_property name="ObjectShortName">control_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/control_wb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_wb</obj_property>
+      <obj_property name="ObjectShortName">control_wb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/readdata1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/readdata2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/aluoutput" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluoutput[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluoutput[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/stall" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">stall[4:0]</obj_property>
+      <obj_property name="ObjectShortName">stall[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram1_adapter_INSTANCE/mem_addr_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_addr_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram1_adapter_INSTANCE/mem_data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_data_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/ramdata_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ramdata_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ramdata_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/aluans_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluans_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluans_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/ram1data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/memcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">memcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram1_adapter_INSTANCE/has_ram_conflict" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">has_ram_conflict</obj_property>
+      <obj_property name="ObjectShortName">has_ram_conflict</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/stallreq_ram_conflict" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stallreq_ram_conflict</obj_property>
+      <obj_property name="ObjectShortName">stallreq_ram_conflict</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/aluans_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluans_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluans_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/regwrite_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regwrite_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">regwrite_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/ram1data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/ram2data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/memcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">memcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/mem_INSTANCE/wbcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">wbcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/pc_ram2_control_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_ram2_control_i</obj_property>
+      <obj_property name="ObjectShortName">pc_ram2_control_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/has_ram_conflict" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">has_ram_conflict</obj_property>
+      <obj_property name="ObjectShortName">has_ram_conflict</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/mem_addr_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_addr_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/mem_data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/mem_ram2_control_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_ram2_control_i</obj_property>
+      <obj_property name="ObjectShortName">mem_ram2_control_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/ram2_adapter_data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_adapter_data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_adapter_data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/ram2_adapter_data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_adapter_data_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_adapter_data_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/ram2_addr_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_addr_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_addr_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/ram2_data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_data_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_data_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/ram2_adapter_INSTANCE/ram2_control_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_control_o</obj_property>
+      <obj_property name="ObjectShortName">ram2_control_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">regs[2]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/works/jiyuan/myCPU_3/myCPU/test_minsopc_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_minsopc" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/test_minsopc/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/pc_INSTANCE/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">regs[3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/regfile_INSTANCE/regs[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">regs[4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/ctrl_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ctrl_pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/branch_confirm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">branch_confirm</obj_property>
+      <obj_property name="ObjectShortName">branch_confirm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/pc_INSTANCE/branchaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">branchaddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">branchaddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/pc_INSTANCE/pcbranchsrc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcbranchsrc</obj_property>
+      <obj_property name="ObjectShortName">pcbranchsrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/id_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/int_imme" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_imme[15:0]</obj_property>
+      <obj_property name="ObjectShortName">int_imme[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/int_inputa" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_inputa[15:0]</obj_property>
+      <obj_property name="ObjectShortName">int_inputa[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/ctrl_branch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ctrl_branch</obj_property>
+      <obj_property name="ObjectShortName">ctrl_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/stallreq_load" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stallreq_load</obj_property>
+      <obj_property name="ObjectShortName">stallreq_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/branch_INSTANCE/ctrl_branch_type" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ctrl_branch_type</obj_property>
+      <obj_property name="ObjectShortName">ctrl_branch_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/imme" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imme[15:0]</obj_property>
+      <obj_property name="ObjectShortName">imme[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minsopc/uut/mymips_INSTANCE/id_INSTANCE/id_inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_inst[15:0]</obj_property>
+   </wvobject>
+</wave_config>

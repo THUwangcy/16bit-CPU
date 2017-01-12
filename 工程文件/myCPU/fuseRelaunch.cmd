@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/sword/Desktop/myCPU/test_minsopc_isim_beh.exe" -prj "C:/Users/sword/Desktop/myCPU/test_minsopc_beh.prj" "work.test_minsopc" 

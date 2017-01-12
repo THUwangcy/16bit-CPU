@@ -1,0 +1,5 @@
+work	"Ram1_adapter.vhd"
+work	"ram2_adapter.vhd"
+work	"storage_state.vhd"
+work	"storage_test.vhd"
+work	"type_lib.vhd"

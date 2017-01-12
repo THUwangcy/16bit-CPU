@@ -1,0 +1,215 @@
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 
+xst -intstyle ise -ifn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.xst" -ofn "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mymips.ucf -p xc3s1200e-fg320-4 mymips.ngc mymips.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o mymips_map.ncd mymips.ngd mymips.pcf 
+par -w -intstyle ise -ol high -t 1 mymips_map.ncd mymips.ncd mymips.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mymips.twx mymips.ncd -o mymips.twr mymips.pcf -ucf mymips.ucf 
+bitgen -intstyle ise -f mymips.ut mymips.ncd 

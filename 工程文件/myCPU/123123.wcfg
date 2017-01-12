@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/sword/Desktop/myCPU_3/myCPU/testbench_storage_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="testbench_storage" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/testbench_storage/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input[15:0]</obj_property>
+      <obj_property name="ObjectShortName">input[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram1_data_io" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1_data_io[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1_data_io[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram2_data_io" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_data_io[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_data_io[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output[15:0]</obj_property>
+      <obj_property name="ObjectShortName">output[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/rdn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdn</obj_property>
+      <obj_property name="ObjectShortName">rdn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/wrn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrn</obj_property>
+      <obj_property name="ObjectShortName">wrn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram1_control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1_control</obj_property>
+      <obj_property name="ObjectShortName">ram1_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram2_control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_control</obj_property>
+      <obj_property name="ObjectShortName">ram2_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram1_addr_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1_addr_o[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1_addr_o[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/ram2_addr_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram2_addr_o[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ram2_addr_o[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/uut/ram1_adapter_INSTANCE/memcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">memcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/uut/ram1_adapter_INSTANCE/aluans_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluans_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluans_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/uut/ram1_adapter_INSTANCE/aluinputb_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluinputb_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluinputb_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_storage/uut/ram1_adapter_INSTANCE/ram1_data_io" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram1_data_io[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram1_data_io[15:0]</obj_property>
+   </wvobject>
+</wave_config>

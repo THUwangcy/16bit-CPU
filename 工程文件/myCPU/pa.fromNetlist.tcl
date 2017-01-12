@@ -1,0 +1,11 @@
+
+# PlanAhead Launch Script for Post-Synthesis pin planning, created by Project Navigator
+
+create_project -name myCPU -dir "C:/Users/sword/Desktop/myCPU_newStart/myCPU/planAhead_run_5" -part xc3s1200efg320-4
+set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+set_property edif_top_file "C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.ngc" [ get_property srcset [ current_run ] ]
+add_files -norecurse { {C:/Users/sword/Desktop/myCPU_newStart/myCPU} }
+set_param project.pinAheadLayout  yes
+set_property target_constrs_file "mymips_with_keyboard.ucf" [current_fileset -constrset]
+add_files [list {mymips_with_keyboard.ucf}] -fileset [get_property constrset [current_run]]
+link_design

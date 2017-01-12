@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/sword/Desktop/myCPU/testPC_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testpc" />
+            <top_module name="type_lib" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="43" />
+   <wvobject fp_name="/testpc/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/id_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/id_inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">id_inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">id_inst[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/read_reg1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/read_reg2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_reg2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/imme" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imme[15:0]</obj_property>
+      <obj_property name="ObjectShortName">imme[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/write_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">write_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/control_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_id</obj_property>
+      <obj_property name="ObjectShortName">control_id</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/control_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_ex</obj_property>
+      <obj_property name="ObjectShortName">control_ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/control_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_mem</obj_property>
+      <obj_property name="ObjectShortName">control_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/control_wb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_wb</obj_property>
+      <obj_property name="ObjectShortName">control_wb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/control_flush" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_flush</obj_property>
+      <obj_property name="ObjectShortName">control_flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/readdata1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/readdata2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_excontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_excontrol_i</obj_property>
+      <obj_property name="ObjectShortName">ex_excontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_memcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_memcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">ex_memcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_wbcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_wbcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">ex_wbcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_reg1_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_reg1_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_reg1_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_reg2_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_reg2_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_reg2_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_imme_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_imme_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_imme_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_regwrite_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_regwrite_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_regwrite_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_memcontrol_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_memcontrol_o</obj_property>
+      <obj_property name="ObjectShortName">ex_memcontrol_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_wbcontrol_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_wbcontrol_o</obj_property>
+      <obj_property name="ObjectShortName">ex_wbcontrol_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/ex_regwrite_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_regwrite_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_regwrite_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/aluoutput" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluoutput[15:0]</obj_property>
+      <obj_property name="ObjectShortName">aluoutput[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_memcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_memcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">mem_memcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_wbcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_wbcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">mem_wbcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_aluans_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_aluans_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_aluans_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_aluinputb_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_aluinputb_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_aluinputb_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_regwrite_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_regwrite_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_regwrite_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_wbcontrol_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_wbcontrol_o</obj_property>
+      <obj_property name="ObjectShortName">mem_wbcontrol_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_regwrite_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_regwrite_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_regwrite_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_aluans_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_aluans_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_aluans_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/mem_ram1data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_ram1data_o[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_ram1data_o[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/wb_wbcontrol_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_wbcontrol_i</obj_property>
+      <obj_property name="ObjectShortName">wb_wbcontrol_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/wb_regwritedata_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_regwritedata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_regwritedata_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/wb_regwrite_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_regwrite_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_regwrite_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testpc/uregfile/regs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regs[11:0]</obj_property>
+      <obj_property name="ObjectShortName">regs[11:0]</obj_property>
+   </wvobject>
+</wave_config>

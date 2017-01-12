@@ -1,0 +1,198 @@
+V3 109
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/acsii.vhd 2016/12/02.08:14:41 P.20131013
+EN work/acsii 1480639613 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/acsii.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/acsii/Behavioral 1480639614 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/acsii.vhd EN work/acsii 1480639613
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ALU.vhd 2016/11/26.00:09:49 P.20131013
+EN work/ALU 1480639597 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ALU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/ALU/Behavioral 1480639598 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ALU.vhd EN work/ALU 1480639597
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/branch_ctrl.vhd 2016/11/24.13:21:17 P.20131013
+EN work/branch_ctrl 1480639591 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/branch_ctrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/branch_ctrl/Behavioral 1480639592 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/branch_ctrl.vhd \
+      EN work/branch_ctrl 1480639591
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Char_mem.vhd 2016/12/02.08:14:40 P.20131013
+EN work/Char_mem 1480639569 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Char_mem.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/Char_mem/arch 1480639570 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Char_mem.vhd \
+      EN work/Char_mem 1480639569
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/controller.vhd 2016/11/30.11:48:52 P.20131013
+EN work/controller 1480639589 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/controller.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/controller/Behavioral 1480639590 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/controller.vhd \
+      EN work/controller 1480639589
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/convert.vhd 2016/11/30.18:07:58 P.20131013
+EN work/convert 1480639575 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/convert.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/convert/Behavioral 1480639576 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/convert.vhd EN work/convert 1480639575
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ctrl.vhd 2016/11/24.13:21:17 P.20131013
+EN work/ctrl 1480639579 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ctrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/ctrl/Behavioral 1480639580 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ctrl.vhd EN work/ctrl 1480639579
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/EX_MEM.vhd 2016/11/26.00:51:34 P.20131013
+EN work/EX_MEM 1480639599 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/EX_MEM.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/EX_MEM/Behavioral 1480639600 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/EX_MEM.vhd EN work/EX_MEM 1480639599
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd 2016/11/27.19:25:47 P.20131013
+EN work/flash_io 1480639609 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB work/type_lib 1480639578
+AR work/flash_io/Behavioral 1480639610 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_io.vhd \
+      EN work/flash_io 1480639609
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_test.vhd 2016/11/27.16:24:17 P.20131013
+EN work/flash_test 1480240296 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_test.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB work/type_lib 1480639578
+AR work/flash_test/Behavioral 1480240297 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/flash_test.vhd \
+      EN work/flash_test 1480240296 CP flash_io
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/front_rom.vhd 2016/12/01.16:48:20 P.20131013
+EN work/font_rom 1480639571 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/front_rom.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/font_rom/arch 1480639572 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/front_rom.vhd \
+      EN work/font_rom 1480639571
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ID_EX.vhd 2016/11/26.00:51:21 P.20131013
+EN work/ID_EX 1480639595 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ID_EX.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/ID_EX/Behavioral 1480639596 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ID_EX.vhd EN work/ID_EX 1480639595
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/if_id.vhd 2016/11/30.13:28:49 P.20131013
+EN work/if_id 1480639585 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/if_id.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/if_id/Behavioral 1480639586 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/if_id.vhd EN work/if_id 1480639585
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/interpreter.vhd 2016/11/25.11:24:20 P.20131013
+EN work/interpreter 1480639587 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/interpreter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PB work/type_lib 1480639578
+AR work/interpreter/Behavioral 1480639588 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/interpreter.vhd \
+      EN work/interpreter 1480639587
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/key_data.vhd 2016/11/30.14:28:06 P.20131013
+EN work/key_data 1480639573 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/key_data.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/key_data/Behavioral 1480639574 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/key_data.vhd \
+      EN work/key_data 1480639573
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/load_ralated.vhd 2016/11/24.13:21:17 P.20131013
+EN work/load_related 1480639581 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/load_ralated.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/load_related/Behavioral 1480639582 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/load_ralated.vhd \
+      EN work/load_related 1480639581
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mem.vhd 2016/11/26.00:45:21 P.20131013
+EN work/mem 1480639601 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mem.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/mem/Behavioral 1480639602 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mem.vhd EN work/mem 1480639601
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/MEM_WB.vhd 2016/11/26.00:51:49 P.20131013
+EN work/MEM_WB 1480639607 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/MEM_WB.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/MEM_WB/Behavioral 1480639608 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/MEM_WB.vhd EN work/MEM_WB 1480639607
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.vhd 2016/12/01.19:20:47 P.20131013
+EN work/mymips 1480639617 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB work/type_lib 1480639578
+AR work/mymips/Behavioral 1480639618 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips.vhd EN work/mymips 1480639617 \
+      CP ctrl CP load_related CP pc_reg CP if_id CP interpreter CP controller \
+      CP branch_ctrl CP Regfile CP ID_EX CP ALU CP EX_MEM CP mem CP Ram1_adapter \
+      CP ram2_adapter CP MEM_WB CP flash_io CP my_keyboard CP acsii CP vga_top
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.vhd 2016/11/30.15:49:50 P.20131013
+EN work/mymips_with_keyboard 1480499325 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/mymips_with_keyboard/Behavioral 1480499326 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/mymips_with_keyboard.vhd \
+      EN work/mymips_with_keyboard 1480499325 CP mymips CP my_keyboard
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/my_keyboard.vhd 2016/11/30.14:37:40 P.20131013
+EN work/my_keyboard 1480639611 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/my_keyboard.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/my_keyboard/Behavioral 1480639612 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/my_keyboard.vhd \
+      EN work/my_keyboard 1480639611 CP key_data CP convert
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/pc_reg.vhd 2016/11/26.17:48:48 P.20131013
+EN work/pc_reg 1480639583 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/pc_reg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/type_lib 1480639578
+AR work/pc_reg/Behavioral 1480639584 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/pc_reg.vhd EN work/pc_reg 1480639583
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Ram1_adapter.vhd 2016/11/27.19:30:22 P.20131013
+EN work/Ram1_adapter 1480639603 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Ram1_adapter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/Ram1_adapter/Behavioral 1480639604 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Ram1_adapter.vhd \
+      EN work/Ram1_adapter 1480639603
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd 2016/11/27.19:22:02 P.20131013
+EN work/ram2_adapter 1480639605 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/type_lib 1480639578
+AR work/ram2_adapter/Behavioral 1480639606 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/ram2_adapter.vhd \
+      EN work/ram2_adapter 1480639605
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd 2016/11/29.22:24:31 P.20131013
+EN work/Regfile 1480639593 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB work/type_lib 1480639578
+AR work/Regfile/Behavioral 1480639594 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/Regfile.vhd EN work/Regfile 1480639593
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/type_lib.vhd 2016/11/29.21:45:53 P.20131013
+PH work/type_lib 1480639577 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/type_lib.vhd \
+      PB ieee/std_logic_1164 1381692176
+PB work/type_lib 1480639578 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/type_lib.vhd \
+      PH work/type_lib 1480639577
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga.vhd 2016/12/01.16:48:20 P.20131013
+EN work/vga 1480639567 FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
+AR work/vga/Behavioral 1480639568 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga.vhd EN work/vga 1480639567
+FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga_top.vhd 2016/12/02.08:46:01 P.20131013
+EN work/vga_top 1480639615 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga_top.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
+AR work/vga_top/Behavioral 1480639616 \
+      FL C:/Users/sword/Desktop/myCPU_newStart/myCPU/vga_top.vhd EN work/vga_top 1480639615 \
+      CP vga CP Char_mem CP font_rom
